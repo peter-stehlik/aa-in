@@ -20,9 +20,10 @@ module.exports = {
       ({ addComponents, theme }) => {
         addComponents({
           ".container": {
-            padding: "0 1rem",
-            margin: "0 auto",
+            /* padding: "0 1rem",
+            margin: "0 auto", */
             width: "100%",
+            minHeight: "calc(100vh - 7rem)",
   
             // Breakpoints
             "@screen sm": {
@@ -43,6 +44,7 @@ module.exports = {
           },
         })
       },
+      require('@tailwindcss/forms'),
     ],
   }
   

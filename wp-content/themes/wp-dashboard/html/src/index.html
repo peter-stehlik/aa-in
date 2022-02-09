@@ -21,13 +21,79 @@
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="fixed top-0 left-0 z-20 flex w-full bg-primary h-12 text-white">
+		<div class="flex justify-center items-center w-60 p-3 bg-tertiary">
+			<a href="#"><img src="./assets/img/logo.svg" width="160" height="50" alt=""></a>
+		</div>
 
+		<div class="flex-1 flex justify-between items-center">
+			<div class="flex px-8">
+				<p>Vitajte <strong>Peter Stehlík</strong></p>
+			</div>
+
+			<div class="h-full">
+				<div class="h-full">
+					<a class="flex justify-center items-center h-full px-4 bg-secondary hover:bg-tertiary" href="#">Odhlásiť sa</a>
+				</div>
+			</div>
+		</div>
 	</header>
 
-	<aside>
+	<div class="flex h-screen">		
+		<aside class="fixed left-0 top-12 z-10 flex flex-col w-60 pt-16 h-screen bg-secondary text-white">
+			<div class="over">
+				<ul class="left-nav">
+					<li><a href="#">Aktuality</a></li>
+					<li><a href="#">Zamestnanecký portál</a></li>
+					<li><a href="#">Onboarding</a></li>
+					<li><a href="#">Užitočné informácie</a>
+						<ul>
+							<li><a href="#">Dovolenky</a></li>
+							<li><a href="#">Vnútorný predpis</a></li>
+							<li><a href="#">Cestovný príkaz - postup</a></li>
+							<li><a href="#">Služobné cesty</a></li>
+							<li><a href="#">Info o spracovaní osobných údajov</a></li>
+							<li><a href="#">Edumio školenia</a></li>
+							<li><a href="#">Potvrdenia pre zamestnancov</a></li>
+							<li><a href="#">Formy stravovania - dotazník</a></li>
+							<li><a href="#">Multisport karty</a></li>
+							<li><a href="#">Eset licencia</a></li>
+							<li><a href="#">Office 365</a></li>
+							<li><a href="#">Odkúpenie hw</a></li>
+							<li><a href="#">Referral program</a></li>
+							<li><a href="#">Užitočné kontakty</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Zoho</a>
+						<ul>
+							<li><a href="#">ZOHO manuál + info o zohosupport</a></li>
+							<li><a href="#">Manuály pre adminov</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Vzdelávanie</a></li>
+					<li><a href="#">Benefity</a></li>
+					<li><a href="#">Teambuildingy</a></li>
+					<li><a href="#">AA bazoš</a></li>
+				</ul>
+			</div>
+		</aside>
 
-	</aside>
+		<main class="flex-1 ml-60 px-8 pt-20">
+			<div class="container flex flex-col">
+				<form class="mt-5 mb-10" action="#">
+					<input class="w-full max-w-md py-4 pl-5 pr-20 border-primary focus:border-tertiary focus:ring-primary bg-green rounded-full text-2xl bg-[url('/assets/img/icn-search.svg')] bg-no-repeat bg-right bg-[length:80px_40px]" type="text" placeholder="čo hľadáte?">
+				</form>
+
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti deserunt distinctio id error eius tenetur optio quas, accusantium, nulla veritatis alias pariatur recusandae? Ab tenetur eaque nam! Ipsa, sunt voluptatum?</p>
+
+				<footer class="mt-auto pt-10 pb-4">
+					<hr class="mb-4">
+
+					<p class="text-gray-400"> Aardwark 2022 &copy; Špecialisti na Enterprise IT riešenia</p>
+				</footer>
+			</div>
+		</main>
+	</div>
 
 
     <script src="./assets/js/custom.js"></script>

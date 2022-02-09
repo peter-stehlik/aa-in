@@ -1,0 +1,51 @@
+/*
+*	GENERAL
+*/
+html,
+body {
+	@apply font-sans text-base text-gray-900;
+	scroll-behavior: smooth;
+}
+body {
+	background: #F5F5F5 url('../img/aardwark-pink.svg') no-repeat bottom 0 right -130px;
+	background-size: 300px 200px;
+	background-attachment: fixed;
+}
+
+/*
+*	NAVIGATION
+*/
+/* left nav */
+.left-nav {
+	@apply mt-2;
+}
+.left-nav > li {
+	@apply relative;
+}
+.left-nav > li > a {
+	@apply flex justify-end px-4 py-1;
+}
+.left-nav > li:hover,
+.left-nav > li:hover > ul {
+	@apply bg-primary;
+}
+.left-nav > li:hover > ul {
+	@apply flex flex-col;
+}
+.left-nav > li > ul {
+	@apply absolute left-full top-0 w-60 hidden;
+}
+.left-nav > li > ul a {
+	@apply flex px-4 py-1;
+}
+.left-nav > li > ul a:hover {
+	@apply bg-secondary;
+}
+
+/*
+*	FORMS
+*/
+input:placeholder-shown,
+textarea:placeholder-shown {
+    @apply bg-white;
+}
