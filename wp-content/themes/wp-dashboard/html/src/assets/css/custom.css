@@ -18,21 +18,28 @@ body {
 *	NAVIGATION
 */
 /* left nav */
+.nav-wrap {
+	transition: transform .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+	transform: translateX(100%);
+}
+.nav-wrap.is-opened {
+	transform: translateX(0);
+}
 .left-nav {
-	@apply mt-2;
+	@apply mt-2 text-lg;
 }
 .left-nav > li {
-	@apply relative;
+	@apply relative flex justify-between lg:justify-end;
 }
 .left-nav > li > a {
-	@apply flex justify-end px-4 py-1;
+	@apply flex justify-start px-4 py-1;
 }
 .left-nav > li:hover,
 .left-nav > li:hover > ul {
 	@apply bg-primary;
 }
 .left-nav > li:hover > ul {
-	@apply flex flex-col;
+	@apply hidden lg:flex flex-col;
 }
 .left-nav > li > ul {
 	@apply absolute left-full top-0 w-60 hidden;
@@ -42,6 +49,26 @@ body {
 }
 .left-nav > li > ul a:hover {
 	@apply bg-secondary;
+}
+.js-mob-sub-nav a {
+	@apply flex py-1 text-lg;
+}
+@screen lg {
+	.nav-wrap {
+		transform: translateX(0);
+	}
+	.left-nav {
+		@apply text-base;
+	}
+	.left-nav > li > a {
+		@apply justify-end;
+	}
+}
+.sub-nav-wrap {
+	transition: transform .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.sub-nav-wrap.is-opened {
+	transform: translateX(-50%);
 }
 
 /*
