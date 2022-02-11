@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/aardwark-apple-touch-icon.png">
+	
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+
+	<title>Bazar | Aardwark</title>
+
+	<meta name="robots" content="noindex,nofollow">
+
+	<link rel="stylesheet" href="./assets/css/custom.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed top-0 left-0 z-20 flex w-full bg-quaternary h-12 text-white">
+		<div class="flex justify-between lg:justify-center items-center w-full lg:w-60 p-3 bg-primary">
+			<a href="#"><img src="./assets/img/logo.svg" width="160" height="50" alt=""></a>
+
+			<a class="relative z-20 js-nav-toggler flex lg:hidden" href="javascript:void(0);">
+				<svg class="w-10 h-8" id="hamburger">
+					<line stroke="#fff" x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--top"></line>
+					<line stroke="#fff" x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--middle"></line>
+					<line stroke="#fff" x1="50%" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--bottom"></line>
+				</svg>			  
+			</a>
+		</div>
+
+		<div class="hidden lg:flex flex-1 justify-between items-center">
+			<div class="flex px-8">
+				<p>Vitajte <strong>Peter Stehlík</strong></p>
+			</div>
+
+			<div class="h-full">
+				<div class="h-full">
+					<a class="flex justify-center items-center h-full px-4 bg-primary hover:bg-secondary" href="#">Odhlásiť sa</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="flex h-screen">		
+        <aside class="nav-wrap fixed left-0 top-12 z-10 lg:flex flex-col w-full lg:w-60 lg:pt-10 h-screen bg-secondary text-white">
+			<div class="sub-nav-wrap w-[200%] flex lg:w-full">
+				<div class="flex-1">
+					<form class="mt-5 mb-2 mx-4" action="/">
+						<input class="w-full py-2 pl-5 pr-20 border-white focus:border-quaternary focus:ring-primary bg-green rounded-full text-lg bg-[url('/assets/img/icn-search.svg')] bg-no-repeat bg-right bg-[length:60px_30px]" type="text" placeholder="čo hľadáte?">
+					</form>
+
+					<ul class="left-nav lg:pt-5">
+						<li><a href="#">Aktuality</a></li>
+						<li><a href="#">Zamestnanecký portál</a></li>
+						<li><a href="#">Onboarding</a></li>
+						<li><a href="#">Užitočné informácie</a>
+							<ul>
+								<li><a href="#">Dovolenky</a></li>
+								<li><a href="#">Vnútorný predpis</a></li>
+								<li><a href="#">Cestovný príkaz - postup</a></li>
+								<li><a href="#">Služobné cesty</a></li>
+								<li><a href="#">Info o spracovaní osobných údajov</a></li>
+								<li><a href="#">Edumio školenia</a></li>
+								<li><a href="#">Potvrdenia pre zamestnancov</a></li>
+								<li><a href="#">Formy stravovania - dotazník</a></li>
+								<li><a href="#">Multisport karty</a></li>
+								<li><a href="#">Eset licencia</a></li>
+								<li><a href="#">Office 365</a></li>
+								<li><a href="#">Odkúpenie hw</a></li>
+								<li><a href="#">Referral program</a></li>
+								<li><a href="#">Užitočné kontakty</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Zoho</a>
+							<ul>
+								<li><a href="#">ZOHO manuál + info o zohosupport</a></li>
+								<li><a href="#">Manuály pre adminov</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Vzdelávanie</a></li>
+						<li><a href="#">Benefity</a></li>
+						<li><a href="#">Teambuildingy</a></li>
+						<li><a href="#">AA bazoš</a></li>
+					</ul>
+
+					<div class="lg:hidden mt-2 px-4">
+						<hr>
+					</div>
+
+					<ul class="left-nav lg:hidden">
+						<li><a href="#">Odhlásiť</a></li>
+					</ul>
+				</div>
+
+				<div class="flex-1 lg:hidden overflow-auto h-screen">
+					<div class="pt-5 pb-5 px-4">
+						<a class="js-back-mob-nav inline-flex mb-4 text-xl" href="javascript:void(0);">
+							<img src="./assets/img/arrow-full-right-medium.svg" width="30" height="20" alt="arrow white right" style="transform: rotate(180deg);">
+							
+							<span class="flex ml-2">Späť</span>
+						</a>
+
+						<hr class="mb-4">
+
+						<ul class="js-mob-sub-nav">
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</aside>
+
+		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
+			<div class="container flex flex-col">
+                <h1 class="lg:mt-5 mb-8 text-primary text-3xl lg:text-6xl">Tím</h1>
+
+				<div class="flex flex-wrap -mx-2 mb-8">
+                    <section class="w-1/2 lg:w-1/4 px-2 mb-8">
+                        <img class="rounded-lg object-cover entered lazyloaded" data-lazy-srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Vladimir-Orlik-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Vladimir-Orlik-540x800.jpg 2x" src="https://www.aardwark.com/wp-content/uploads/2022/01/Vladimir-Orlik-270x400.jpg" alt="Vladimir Orlik" data-lazy-src="https://www.aardwark.com/wp-content/uploads/2022/01/Vladimir-Orlik-270x400.jpg" data-ll-status="loaded" srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Vladimir-Orlik-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Vladimir-Orlik-540x800.jpg 2x" width="270" height="400"><noscript><img
+            class="rounded-lg object-cover"
+            width="270"
+            height="400"
+            srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Vladimir-Orlik-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Vladimir-Orlik-540x800.jpg 2x"
+            src="https://www.aardwark.com/wp-content/uploads/2022/01/Vladimir-Orlik-270x400.jpg"
+            alt="Vladimir Orlik"
+        ></noscript>
+    
+    <strong class="flex mt-4">Vladimír Orlík</strong>
+
+    <p class="text-primary">Managing Partner</p>
+</section>
+
+
+
+<section class="w-1/2 lg:w-1/4 px-2 mb-8">
+                        <img class="rounded-lg object-cover entered lazyloaded" data-lazy-srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Girovsky-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Girovsky-540x800.jpg 2x" src="https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Girovsky-270x400.jpg" alt="Peter Girovsky" data-lazy-src="https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Girovsky-270x400.jpg" data-ll-status="loaded" srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Girovsky-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Girovsky-540x800.jpg 2x" width="270" height="400"><noscript><img
+            class="rounded-lg object-cover"
+            width="270"
+            height="400"
+            srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Girovsky-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Girovsky-540x800.jpg 2x"
+            src="https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Girovsky-270x400.jpg"
+            alt="Peter Girovsky"
+        ></noscript>
+    
+    <strong class="flex mt-4">Peter Girovský</strong>
+
+    <p class="text-primary">Managing Partner</p>
+</section>
+
+
+
+<section class="w-1/2 lg:w-1/4 px-2 mb-8">
+                        <img class="rounded-lg object-cover entered lazyloaded" data-lazy-srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holub-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holub-540x800.jpg 2x" src="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holub-270x400.jpg" alt="Michal Holub" data-lazy-src="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holub-270x400.jpg" data-ll-status="loaded" srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holub-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holub-540x800.jpg 2x" width="270" height="400"><noscript><img
+            class="rounded-lg object-cover"
+            width="270"
+            height="400"
+            srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holub-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holub-540x800.jpg 2x"
+            src="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holub-270x400.jpg"
+            alt="Michal Holub"
+        ></noscript>
+    
+    <strong class="flex mt-4">Michal Holub</strong>
+
+    <p class="text-primary">Financial Manager</p>
+</section>
+
+
+
+<section class="w-1/2 lg:w-1/4 px-2 mb-8">
+                        <img class="rounded-lg object-cover entered lazyloaded" data-lazy-srcset="https://www.aardwark.com/wp-content/uploads/2021/12/Zoltan-Bachnak-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2021/12/Zoltan-Bachnak-540x800.jpg 2x" src="https://www.aardwark.com/wp-content/uploads/2021/12/Zoltan-Bachnak-270x400.jpg" alt="Zoltan Bachnak" data-lazy-src="https://www.aardwark.com/wp-content/uploads/2021/12/Zoltan-Bachnak-270x400.jpg" data-ll-status="loaded" srcset="https://www.aardwark.com/wp-content/uploads/2021/12/Zoltan-Bachnak-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2021/12/Zoltan-Bachnak-540x800.jpg 2x" width="270" height="400"><noscript><img
+            class="rounded-lg object-cover"
+            width="270"
+            height="400"
+            srcset="https://www.aardwark.com/wp-content/uploads/2021/12/Zoltan-Bachnak-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2021/12/Zoltan-Bachnak-540x800.jpg 2x"
+            src="https://www.aardwark.com/wp-content/uploads/2021/12/Zoltan-Bachnak-270x400.jpg"
+            alt="Zoltan Bachnak"
+        ></noscript>
+    
+    <strong class="flex mt-4">Zoltán Bachňák</strong>
+
+    <p class="text-primary">BPM Lead</p>
+</section>
+
+
+
+<section class="w-1/2 lg:w-1/4 px-2 mb-8">
+                        <img class="rounded-lg object-cover entered lazyloaded" data-lazy-srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Kontris-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Kontris-540x800.jpg 2x" src="https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Kontris-270x400.jpg" alt="Peter Kontris" data-lazy-src="https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Kontris-270x400.jpg" data-ll-status="loaded" srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Kontris-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Kontris-540x800.jpg 2x" width="270" height="400"><noscript><img
+            class="rounded-lg object-cover"
+            width="270"
+            height="400"
+            srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Kontris-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Kontris-540x800.jpg 2x"
+            src="https://www.aardwark.com/wp-content/uploads/2022/01/Peter-Kontris-270x400.jpg"
+            alt="Peter Kontris"
+        ></noscript>
+    
+    <strong class="flex mt-4">Peter Kontriš</strong>
+
+    <p class="text-primary">Outsourcing and HR Lead</p>
+</section>
+
+
+
+<section class="w-1/2 lg:w-1/4 px-2 mb-8">
+                        <img class="rounded-lg object-cover entered lazyloaded" data-lazy-srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holecka-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holecka-540x800.jpg 2x" src="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holecka-270x400.jpg" alt="Michal Holecka" data-lazy-src="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holecka-270x400.jpg" data-ll-status="loaded" srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holecka-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holecka-540x800.jpg 2x" width="270" height="400"><noscript><img
+            class="rounded-lg object-cover"
+            width="270"
+            height="400"
+            srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holecka-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holecka-540x800.jpg 2x"
+            src="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Holecka-270x400.jpg"
+            alt="Michal Holecka"
+        ></noscript>
+    
+    <strong class="flex mt-4">Michal Holečka</strong>
+
+    <p class="text-primary">IT Development Lead</p>
+</section>
+
+
+
+<section class="w-1/2 lg:w-1/4 px-2 mb-8">
+                        <img class="rounded-lg object-cover entered lazyloaded" data-lazy-srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Igor-Furdik-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Igor-Furdik-540x800.jpg 2x" src="https://www.aardwark.com/wp-content/uploads/2022/01/Igor-Furdik-270x400.jpg" alt="Igor Furdik" data-lazy-src="https://www.aardwark.com/wp-content/uploads/2022/01/Igor-Furdik-270x400.jpg" data-ll-status="loaded" srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Igor-Furdik-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Igor-Furdik-540x800.jpg 2x" width="270" height="400"><noscript><img
+            class="rounded-lg object-cover"
+            width="270"
+            height="400"
+            srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Igor-Furdik-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Igor-Furdik-540x800.jpg 2x"
+            src="https://www.aardwark.com/wp-content/uploads/2022/01/Igor-Furdik-270x400.jpg"
+            alt="Igor Furdik"
+        ></noscript>
+    
+    <strong class="flex mt-4">Igor Furdík</strong>
+
+    <p class="text-primary">Sales Lead</p>
+</section>
+
+
+
+<section class="w-1/2 lg:w-1/4 px-2 mb-8">
+                        <img class="rounded-lg object-cover entered lazyloaded" data-lazy-srcset="https://www.aardwark.com/wp-content/uploads/2021/12/Aardwark_avatarM-1-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2021/12/Aardwark_avatarM-1-540x800.jpg 2x" src="https://www.aardwark.com/wp-content/uploads/2021/12/Aardwark_avatarM-1-270x400.jpg" alt="avatar" data-lazy-src="https://www.aardwark.com/wp-content/uploads/2021/12/Aardwark_avatarM-1-270x400.jpg" data-ll-status="loaded" srcset="https://www.aardwark.com/wp-content/uploads/2021/12/Aardwark_avatarM-1-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2021/12/Aardwark_avatarM-1-540x800.jpg 2x" width="270" height="400"><noscript><img
+            class="rounded-lg object-cover"
+            width="270"
+            height="400"
+            srcset="https://www.aardwark.com/wp-content/uploads/2021/12/Aardwark_avatarM-1-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2021/12/Aardwark_avatarM-1-540x800.jpg 2x"
+            src="https://www.aardwark.com/wp-content/uploads/2021/12/Aardwark_avatarM-1-270x400.jpg"
+            alt="avatar"
+        ></noscript>
+    
+    <strong class="flex mt-4">Gabriel Olekšák</strong>
+
+    <p class="text-primary">DevOps, Cloud Lead</p>
+</section>
+
+
+
+<section class="w-1/2 lg:w-1/4 px-2 mb-8">
+                        <img class="rounded-lg object-cover entered lazyloaded" data-lazy-srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Andrea-Sirova-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Andrea-Sirova-540x800.jpg 2x" src="https://www.aardwark.com/wp-content/uploads/2022/01/Andrea-Sirova-270x400.jpg" alt="Andrea Sirova" data-lazy-src="https://www.aardwark.com/wp-content/uploads/2022/01/Andrea-Sirova-270x400.jpg" data-ll-status="loaded" srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Andrea-Sirova-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Andrea-Sirova-540x800.jpg 2x" width="270" height="400"><noscript><img
+            class="rounded-lg object-cover"
+            width="270"
+            height="400"
+            srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Andrea-Sirova-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Andrea-Sirova-540x800.jpg 2x"
+            src="https://www.aardwark.com/wp-content/uploads/2022/01/Andrea-Sirova-270x400.jpg"
+            alt="Andrea Sirova"
+        ></noscript>
+    
+    <strong class="flex mt-4">Andrea Šírová</strong>
+
+    <p class="text-primary">Marketing Manager</p>
+</section>
+
+
+
+<section class="w-1/2 lg:w-1/4 px-2 mb-8">
+                        <img class="rounded-lg object-cover entered lazyloaded" data-lazy-srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Tatiana-Hornakova-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Tatiana-Hornakova-540x800.jpg 2x" src="https://www.aardwark.com/wp-content/uploads/2022/01/Tatiana-Hornakova-270x400.jpg" alt="Tatiana Hornakova" data-lazy-src="https://www.aardwark.com/wp-content/uploads/2022/01/Tatiana-Hornakova-270x400.jpg" data-ll-status="loaded" srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Tatiana-Hornakova-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Tatiana-Hornakova-540x800.jpg 2x" width="270" height="400"><noscript><img
+            class="rounded-lg object-cover"
+            width="270"
+            height="400"
+            srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Tatiana-Hornakova-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Tatiana-Hornakova-540x800.jpg 2x"
+            src="https://www.aardwark.com/wp-content/uploads/2022/01/Tatiana-Hornakova-270x400.jpg"
+            alt="Tatiana Hornakova"
+        ></noscript>
+    
+    <strong class="flex mt-4">Tatiana Hornáková</strong>
+
+    <p class="text-primary">HR Consultant</p>
+</section>
+
+
+
+<section class="w-1/2 lg:w-1/4 px-2 mb-8">
+                        <img class="rounded-lg object-cover entered lazyloaded" data-lazy-srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Bartko-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Bartko-540x800.jpg 2x" src="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Bartko-270x400.jpg" alt="Michal Bartko" data-lazy-src="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Bartko-270x400.jpg" data-ll-status="loaded" srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Bartko-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Bartko-540x800.jpg 2x" width="270" height="400"><noscript><img
+            class="rounded-lg object-cover"
+            width="270"
+            height="400"
+            srcset="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Bartko-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Bartko-540x800.jpg 2x"
+            src="https://www.aardwark.com/wp-content/uploads/2022/01/Michal-Bartko-270x400.jpg"
+            alt="Michal Bartko"
+        ></noscript>
+    
+    <strong class="flex mt-4">Michal Bartko</strong>
+
+    <p class="text-primary">HR Consultant</p>
+</section>
+
+
+
+<section class="w-1/2 lg:w-1/4 px-2 mb-8">
+                        <img class="rounded-lg object-cover entered lazyloaded" data-lazy-srcset="https://www.aardwark.com/wp-content/uploads/2022/02/Adriana-Vrzgulova-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/02/Adriana-Vrzgulova-540x800.jpg 2x" src="https://www.aardwark.com/wp-content/uploads/2022/02/Adriana-Vrzgulova-270x400.jpg" alt="Adriana Vrzgulova" data-lazy-src="https://www.aardwark.com/wp-content/uploads/2022/02/Adriana-Vrzgulova-270x400.jpg" data-ll-status="loaded" srcset="https://www.aardwark.com/wp-content/uploads/2022/02/Adriana-Vrzgulova-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/02/Adriana-Vrzgulova-540x800.jpg 2x" width="270" height="400"><noscript><img
+            class="rounded-lg object-cover"
+            width="270"
+            height="400"
+            srcset="https://www.aardwark.com/wp-content/uploads/2022/02/Adriana-Vrzgulova-270x400.jpg,
+                        https://www.aardwark.com/wp-content/uploads/2022/02/Adriana-Vrzgulova-540x800.jpg 2x"
+            src="https://www.aardwark.com/wp-content/uploads/2022/02/Adriana-Vrzgulova-270x400.jpg"
+            alt="Adriana Vrzgulova"
+        ></noscript>
+    
+    <strong class="flex mt-4">Adriana Vrzgulová</strong>
+
+    <p class="text-primary">HR Consultant</p>
+</section>
+				</div>
+
+				<footer class="mt-auto pt-10 pb-4">
+					<hr class="mb-4">
+
+					<p class="text-gray-400"> Aardwark 2022 <span class="block lg:inline">&copy; Špecialisti na Enterprise IT riešenia</span></p>
+				</footer>
+			</div>
+		</main>
+	</div>
+
+
+    <script src="./assets/js/custom.js"></script>
+</body>
+</html>

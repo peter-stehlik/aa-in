@@ -6,9 +6,14 @@ body {
 	@apply font-sans text-base text-gray-900;
 	scroll-behavior: smooth;
 }
-@screen 2xl {
+body {
+	background-color: #f5f5f5;
+}
+@screen xl {
 	body {
-		background: #F5F5F5 url('../img/aardwark-pink.svg') no-repeat bottom 0 right -130px;
+		background-image: url('../img/aardwark-pink.svg');
+		background-repeat: no-repeat;
+		background-position: bottom 0 right -130px;
 		background-size: 300px 200px;
 		background-attachment: fixed;
 	}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/aardwark-apple-touch-icon.png">
+	
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+
+	<title>Text | Aardwark</title>
+
+	<meta name="robots" content="noindex,nofollow">
+
+	<link rel="stylesheet" href="./assets/css/custom.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed top-0 left-0 z-20 flex w-full bg-quaternary h-12 text-white">
+		<div class="flex justify-between lg:justify-center items-center w-full lg:w-60 p-3 bg-primary">
+			<a href="#"><img src="./assets/img/logo.svg" width="160" height="50" alt=""></a>
+
+			<a class="relative z-20 js-nav-toggler flex lg:hidden" href="javascript:void(0);">
+				<svg class="w-10 h-8" id="hamburger">
+					<line stroke="#fff" x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--top"></line>
+					<line stroke="#fff" x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--middle"></line>
+					<line stroke="#fff" x1="50%" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--bottom"></line>
+				</svg>			  
+			</a>
+		</div>
+
+		<div class="hidden lg:flex flex-1 justify-between items-center">
+			<div class="flex px-8">
+				<p>Vitajte <strong>Peter Stehlík</strong></p>
+			</div>
+
+			<div class="h-full">
+				<div class="h-full">
+					<a class="flex justify-center items-center h-full px-4 bg-primary hover:bg-secondary" href="#">Odhlásiť sa</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="flex h-screen">		
+		<aside class="nav-wrap fixed left-0 top-12 z-10 lg:flex flex-col w-full lg:w-60 lg:pt-10 h-screen bg-secondary text-white">
+			<div class="sub-nav-wrap w-[200%] flex lg:w-full">
+				<div class="flex-1">
+					<form class="mt-5 mb-2 mx-4" action="/">
+						<input class="w-full py-2 pl-5 pr-20 border-white focus:border-quaternary focus:ring-primary bg-green rounded-full text-lg bg-[url('/assets/img/icn-search.svg')] bg-no-repeat bg-right bg-[length:60px_30px]" type="text" placeholder="čo hľadáte?">
+					</form>
+
+					<ul class="left-nav lg:pt-5">
+						<li><a href="#">Aktuality</a></li>
+						<li><a href="#">Zamestnanecký portál</a></li>
+						<li><a href="#">Onboarding</a></li>
+						<li><a href="#">Užitočné informácie</a>
+							<ul>
+								<li><a href="#">Dovolenky</a></li>
+								<li><a href="#">Vnútorný predpis</a></li>
+								<li><a href="#">Cestovný príkaz - postup</a></li>
+								<li><a href="#">Služobné cesty</a></li>
+								<li><a href="#">Info o spracovaní osobných údajov</a></li>
+								<li><a href="#">Edumio školenia</a></li>
+								<li><a href="#">Potvrdenia pre zamestnancov</a></li>
+								<li><a href="#">Formy stravovania - dotazník</a></li>
+								<li><a href="#">Multisport karty</a></li>
+								<li><a href="#">Eset licencia</a></li>
+								<li><a href="#">Office 365</a></li>
+								<li><a href="#">Odkúpenie hw</a></li>
+								<li><a href="#">Referral program</a></li>
+								<li><a href="#">Užitočné kontakty</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Zoho</a>
+							<ul>
+								<li><a href="#">ZOHO manuál + info o zohosupport</a></li>
+								<li><a href="#">Manuály pre adminov</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Vzdelávanie</a></li>
+						<li><a href="#">Benefity</a></li>
+						<li><a href="#">Teambuildingy</a></li>
+						<li><a href="#">AA bazoš</a></li>
+					</ul>
+
+					<div class="lg:hidden mt-2 px-4">
+						<hr>
+					</div>
+
+					<ul class="left-nav lg:hidden">
+						<li><a href="#">Odhlásiť</a></li>
+					</ul>
+				</div>
+
+				<div class="flex-1 lg:hidden overflow-auto h-screen">
+					<div class="pt-5 pb-5 px-4">
+						<a class="js-back-mob-nav inline-flex mb-4 text-xl" href="javascript:void(0);">
+							<img src="./assets/img/arrow-full-right-medium.svg" width="30" height="20" alt="arrow white right" style="transform: rotate(180deg);">
+							
+							<span class="flex ml-2">Späť</span>
+						</a>
+
+						<hr class="mb-4">
+
+						<ul class="js-mob-sub-nav">
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</aside>
+
+		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
+			<div class="container flex flex-col mx-auto lg:mx-0">
+                <div class="prose prose-a:text-secondary hover:prose-a:no-underline xl:w-3/4 lg:pt-8 pb-20 mx-auto">
+                    <h1 class="mb-2">BPM – procesná automatizácia</h1>
+
+                    <div class="flex items-center">
+                        <time class="inline-flex mr-2 text-gray-500" datetime="2018-07-07">13.2.2022</time>
+
+                        <span class="text-sm"><a href="#">TB info</a></span>
+                    </div>
+
+                    <img class="rounded-lg" src="./assets/img/og-image.jpg" width="800" height="600" alt="">
+                    
+                    <p>Zefektívnite svoje firemné procesy pomocou BPM. Spoľahnite sa na jednotku v oblasti procesnej automatizácie na Slovensku a nechajte si poradiť tímom našich odborníkov.</p>
+                    
+                    <h2>Už viac ako 10 rokov patríme medzi lídrov v oblasti Biznis proces manažmentu</h2>
+                    
+                    <p>Spoločnosť Aardwark navrhuje a realizuje <strong>automatizáciu procesov</strong> od jednoduchých procesných riešení cez plne automatizované procesné riešenia až po komplexné mnohoúrovňové schvaľovacie procesy.</p>
+
+                    <h2>Efektívne riešenia, vďaka ktorým zvýšite výkon a odstránite chybovosť</h2>
+                    
+                    <p>Na správnu identifikáciu firemných procesov, ich  zaznamenávanie a zefektívnenie sa zameriava BPM – Biznis proces manažment.</p>
+
+                    <ul>
+                        <li>Získajte kontrolu</li>
+                        <li>Maximalizácia zisku a zníženie nákladov</li>
+                        <li>Možnosti automatizácie</li>
+                    </ul>
+                    
+                    <p>Poskytuje firmám kontrolu nad existujúcimi procesmi, pružnosť pri ich zmene a vysokú efektívnosť pri ich zlepšovaní. Prináša tiež široké možnosti automatizácie, pokročilého automatizovaného rozhodovania, robotizácie a digitalizácie.</p>
+                    
+                    <p>Vďaka BPM zefektívnite celý pracovný proces od jeho počiatočnej fázy až po kontrolu a analýzu celého projektu. Správnym zadefinovaním pracovného postupu dokážete rýchlejšie a jednoduchšie reagovať na akúkoľvek zmenu, ktorá vo vašej firme alebo odvetví nastane. <a href="#">Výhody služby Procesná automatizácia</a></p>
+
+                    <h3>Konkurenčná výhoda</h3>
+                    
+                    <p>Rozpoznajte vďaka správne nastaveným firemným procesom budúce príležitosti na vašom trhu a reagujte na akúkoľvek zmenu rýchlejšie než vaša konkurencia.</p>
+
+                    <h3>Úspora času</h3>
+
+                    <p>Ušetrite drahocenný čas sebe aj vašim zamestnancom a zjednodušte svoje firemné procesy. Tie sa správnym nastavením a riadením stávajú rýchlejšie, konzistentnejšie a účinnejšie.</p>
+
+                    <h3>Efektívne firemné procesy</h3>
+
+                    <p>Odhaľte chyby, zlepšite a zdokonaľte svoje každodenné firemné činnosti. BPM vám pomôže zvýšiť výkonnosť firmy optimalizáciou vašich obchodných procesov.</p>
+                </div>
+
+				<footer class="mt-auto pt-10 pb-4">
+					<hr class="mb-4">
+
+					<p class="text-gray-400"> Aardwark 2022 <span class="block lg:inline">&copy; Špecialisti na Enterprise IT riešenia</span></p>
+				</footer>
+			</div>
+		</main>
+	</div>
+
+
+    <script src="./assets/js/custom.js"></script>
+</body>
+</html>
