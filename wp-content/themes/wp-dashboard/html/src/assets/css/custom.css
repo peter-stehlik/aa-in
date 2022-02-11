@@ -6,10 +6,12 @@ body {
 	@apply font-sans text-base text-gray-900;
 	scroll-behavior: smooth;
 }
-body {
-	background: #F5F5F5 url('../img/aardwark-pink.svg') no-repeat bottom 0 right -130px;
-	background-size: 300px 200px;
-	background-attachment: fixed;
+@screen 2xl {
+	body {
+		background: #F5F5F5 url('../img/aardwark-pink.svg') no-repeat bottom 0 right -130px;
+		background-size: 300px 200px;
+		background-attachment: fixed;
+	}
 }
 
 /*
@@ -40,6 +42,31 @@ body {
 }
 .left-nav > li > ul a:hover {
 	@apply bg-secondary;
+}
+
+/*
+*	MOBILE NAVIGATION
+*/
+.hamburger__bar {
+	stroke-width: 10%;
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transform-origin: center;
+}
+.hamburger__bar--top {
+	transform: translateY(-30%);
+}
+.hamburger__bar--bottom {
+	transform: translateY(30%);
+}
+.is-opened .hamburger__bar--top {
+	transform: rotate(45deg);
+}
+.is-opened .hamburger__bar--middle {
+	transform: rotate(-45deg);
+}
+.is-opened .hamburger__bar--bottom {
+	transform: scaleX(0.01);
 }
 
 /*

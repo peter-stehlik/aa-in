@@ -21,26 +21,34 @@
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="fixed top-0 left-0 z-20 flex w-full bg-primary h-12 text-white">
-		<div class="flex justify-center items-center w-60 p-3 bg-tertiary">
+    <header class="fixed top-0 left-0 z-20 flex w-full bg-quaternary h-12 text-white">
+		<div class="flex justify-between lg:justify-center items-center w-full lg:w-60 p-3 bg-primary">
 			<a href="#"><img src="./assets/img/logo.svg" width="160" height="50" alt=""></a>
+
+			<a class="relative z-20 js-nav-toggler flex lg:hidden" href="javascript:void(0);">
+				<svg class="w-10 h-8" id="hamburger">
+					<line stroke="#fff" x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--top"></line>
+					<line stroke="#fff" x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--middle"></line>
+					<line stroke="#fff" x1="50%" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--bottom"></line>
+				</svg>			  
+			</a>
 		</div>
 
-		<div class="flex-1 flex justify-between items-center">
+		<div class="hidden lg:flex flex-1 justify-between items-center">
 			<div class="flex px-8">
 				<p>Vitajte <strong>Peter Stehlík</strong></p>
 			</div>
 
 			<div class="h-full">
 				<div class="h-full">
-					<a class="flex justify-center items-center h-full px-4 bg-secondary hover:bg-tertiary" href="#">Odhlásiť sa</a>
+					<a class="flex justify-center items-center h-full px-4 bg-primary hover:bg-secondary" href="#">Odhlásiť sa</a>
 				</div>
 			</div>
 		</div>
 	</header>
 
 	<div class="flex h-screen">		
-		<aside class="fixed left-0 top-12 z-10 flex flex-col w-60 pt-16 h-screen bg-secondary text-white">
+		<aside class="nav-wrap hidden fixed left-0 top-12 z-10 lg:flex flex-col w-full lg:w-60 pt-16 h-screen bg-secondary text-white">
 			<div class="over">
 				<ul class="left-nav">
 					<li><a href="#">Aktuality</a></li>
@@ -78,13 +86,138 @@
 			</div>
 		</aside>
 
-		<main class="flex-1 ml-60 px-8 pt-20">
+		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
 			<div class="container flex flex-col">
-				<form class="mt-5 mb-10" action="#">
-					<input class="w-full max-w-md py-4 pl-5 pr-20 border-primary focus:border-tertiary focus:ring-primary bg-green rounded-full text-2xl bg-[url('/assets/img/icn-search.svg')] bg-no-repeat bg-right bg-[length:80px_40px]" type="text" placeholder="čo hľadáte?">
+				<form class="lg:mt-5 mb-5 lg:mb-10" action="#">
+					<input class="w-full max-w-md py-4 pl-5 pr-20 border-primary focus:border-quaternary focus:ring-primary bg-green rounded-full text-2xl bg-[url('/assets/img/icn-search.svg')] bg-no-repeat bg-right bg-[length:80px_40px]" type="text" placeholder="čo hľadáte?">
 				</form>
 
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti deserunt distinctio id error eius tenetur optio quas, accusantium, nulla veritatis alias pariatur recusandae? Ab tenetur eaque nam! Ipsa, sunt voluptatum?</p>
+				<div class="flex flex-wrap -mx-2 mb-8">
+					<div class="w-full sm:w-1/2 lg:w-2/3 mb-4 px-2">
+						<article class="h-full bg-quaternary p-4 rounded-lg text-white">
+							<figure>
+								<a href="#">
+									<img class="w-full rounded-lg object-cover" src="./assets/img/og-image.jpg" height="192" alt="" style="height: 227px;">
+								</a>
+							</figure>
+
+							<div class="pt-4">
+								<span class="text-sm text-green"><a class="hover:border-b border-green" href="#">TB info</a></span>
+								<h2 class="text-xl lg:text-3xl"><a class="hover:underline focus:text-green" href="#">Celofiremná akcia už čoskoro.</a></h2>
+							</div>
+						</article>
+					</div>
+
+					<div class="w-full sm:w-1/2 lg:w-1/3 mb-4 px-2">
+						<article class="h-full bg-secondary p-4 rounded-lg text-white">
+							<figure>
+								<a href="#">
+									<img class="rounded-lg" src="./assets/img/caoursel1.jpg" alt="">
+								</a>
+							</figure>
+
+							<div class="pt-4">
+								<span class="text-sm text-green"><a class="hover:border-b border-green" href="#">TB info</a></span>
+								<h2 class="text-xl lg:text-3xl"><a class="hover:underline focus:text-green" href="#">Najbližšie sa stretneme na lezeckej stene.</a></h2>
+							</div>
+						</article>
+					</div>
+
+					<div class="w-full sm:w-1/2 lg:w-1/3 mb-4 px-2">
+						<article class="h-full bg-secondary p-4 rounded-lg text-white">
+							<figure>
+								<a href="#">
+									<img class="rounded-lg" src="./assets/img/caoursel2.jpg" alt="">
+								</a>
+							</figure>
+
+							<div class="pt-4">
+								<span class="text-sm text-green"><a class="hover:border-b border-green" href="#">Raňajky info</a></span>
+								<h2 class="text-xl lg:text-3xl"><a class="hover:underline focus:text-green" href="#">Raňajky v štýle indickej kuchyne.</a></h2>
+							</div>
+						</article>
+					</div>
+
+					<div class="w-full sm:w-1/2 lg:w-1/3 mb-4 px-2">
+						<article class="h-full bg-secondary p-4 rounded-lg text-white">
+							<figure>
+								<a href="#">
+									<img class="rounded-lg" src="./assets/img/caoursel3.jpg" alt="">
+								</a>
+							</figure>
+
+							<div class="pt-4">
+								<span class="text-sm text-green"><a class="hover:border-b border-green" href="#">Dovolenky info</a></span>
+								<h2 class="text-xl lg:text-3xl"><a class="hover:underline focus:text-green" href="#">Celozávodná dovolenka tento rok nebude.</a></h2>
+							</div>
+						</article>
+					</div>
+
+					<div class="w-full sm:w-1/2 lg:w-1/3 mb-4 px-2">
+						<article class="h-full bg-quaternary p-4 rounded-lg text-white">
+							<figure>
+								<a href="#">
+									<img class="rounded-lg" src="./assets/img/caoursel2.jpg" alt="">
+								</a>
+							</figure>
+
+							<div class="pt-4">
+								<span class="text-sm text-green"><a class="hover:border-b border-green" href="#">Office info</a></span>
+								<h2 class="text-xl lg:text-3xl"><a class="hover:underline focus:text-green" href="#">Tento týždeň upratujú devopsáci.</a></h2>
+							</div>
+						</article>
+					</div>
+
+					<div class="w-full sm:w-1/2 lg:w-1/3 mb-4 px-2">
+						<article class="h-full bg-secondary p-4 rounded-lg text-white">
+							<figure>
+								<a href="#">
+									<img class="rounded-lg" src="./assets/img/caoursel3.jpg" alt="">
+								</a>
+							</figure>
+
+							<div class="pt-4">
+								<span class="text-sm text-green"><a class="hover:border-b border-green" href="#">Dovolenky info</a></span>
+								<h2 class="text-xl lg:text-3xl"><a class="hover:underline focus:text-green" href="#">Celozávodná dovolenka tento rok nebude.</a></h2>
+							</div>
+						</article>
+					</div>
+
+					<div class="w-full sm:w-1/2 lg:w-1/3 mb-4 px-2">
+						<article class="h-full bg-quaternary p-4 rounded-lg text-white">
+							<figure>
+								<a href="#">
+									<img class="rounded-lg" src="./assets/img/caoursel2.jpg" alt="">
+								</a>
+							</figure>
+
+							<div class="pt-4">
+								<span class="text-sm text-green"><a class="hover:border-b border-green" href="#">Raňajky info</a></span>
+								<h2 class="text-xl lg:text-3xl"><a class="hover:underline focus:text-green" href="#">Raňajky v štýle indickej kuchyne.</a></h2>
+							</div>
+						</article>
+					</div>
+
+					<div class="w-full sm:w-1/2 lg:w-1/3 mb-4 px-2">
+						<article class="h-full bg-secondary p-4 rounded-lg text-white">
+							<figure>
+								<a href="#">
+									<img class="rounded-lg" src="./assets/img/caoursel2.jpg" alt="">
+								</a>
+							</figure>
+
+							<div class="pt-4">
+								<span class="text-sm text-green"><a class="hover:border-b border-green" href="#">Office info</a></span>
+								<h2 class="text-xl lg:text-3xl"><a class="hover:underline focus:text-green" href="#">Tento týždeň upratujú devopsáci.</a></h2>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<div class="flex justify-between items-center py-4 mb-20">
+					<a href="#">Predošlé</a>
+					<a href="#">Ďalšie</a>
+				</div>
 
 				<footer class="mt-auto pt-10 pb-4">
 					<hr class="mb-4">
