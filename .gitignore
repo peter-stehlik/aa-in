@@ -1,4 +1,7 @@
 .vscode/
+wp-content/plugins/
 wp-content/themes/wp-dashboard/package-lock.json
 wp-content/themes/wp-dashboard/node_modules/
 wp-content/themes/wp-dashboard/html/dist/
+wp-content/themes/wp-dashboard/assets/
+wp-content/themes/wp-dashboard/acf-json/

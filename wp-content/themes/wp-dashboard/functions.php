@@ -30,7 +30,7 @@ if (!function_exists('page_setup')) :
          * hard-coded <title> tag in the document head, and expect WordPress to
          * provide it for us.
          */
-        // add_theme_support('title-tag');
+        add_theme_support('title-tag');
 
         /*
          * Enable support for Post Thumbnails on posts and pages.
@@ -126,10 +126,10 @@ add_action('widgets_init', 'page_widgets_init');
 
 function add_theme_scripts()
 {
-    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=4.8');
+    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=1.0');
 	// wp_enqueue_style('theme-styles', get_stylesheet_uri() . '?v=3.4');
 	
-	wp_enqueue_script('aardwark', get_template_directory_uri().'/assets/js/custom.min.js', array(), 2.9, true);
+	wp_enqueue_script('aardwark', get_template_directory_uri().'/assets/js/custom.min.js', array(), 1.0, true);
 	
 }
   add_action('wp_enqueue_scripts', 'add_theme_scripts');
@@ -221,7 +221,7 @@ function remove_jquery_migrate($scripts)
         }
     }
 }
-add_action('wp_default_scripts', 'remove_jquery_migrate');
+// add_action('wp_default_scripts', 'remove_jquery_migrate');
 
 
 // REMOVE CERTAIN PAGES FROM LIST IN BACKEND

@@ -15,7 +15,7 @@ services:
   phpmyadmin:
     image: phpmyadmin:latest
     ports:
-      - "8080:80"
+      - "8082:80"
     environment:
       MYSQL_ROOT_PASSWORD: somewordpress
     depends_on:
@@ -28,7 +28,7 @@ services:
     volumes:
       - ./wp-content:/var/www/html/wp-content
     ports:
-      - "8000:80"
+      - "8080:80"
     restart: always
     environment:
       WORDPRESS_DB_HOST: db

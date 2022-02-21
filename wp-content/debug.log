@@ -1,0 +1,8 @@
+[21-Feb-2022 15:42:15 UTC] PHP Fatal error:  Cannot declare class Debug_Bar, because the name is already in use in /var/www/html/wp-content/plugins/debug-bar/debug-bar.php on line 20
+[21-Feb-2022 15:46:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_header() in /var/www/html/wp-content/themes/wp-dashboard/index.php:1
+Stack trace:
+#0 /var/www/html/wp-includes/template-loader.php(106): include()
+#1 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#2 /var/www/html/index.php(17): require('/var/www/html/w...')
+#3 {main}
+  thrown in /var/www/html/wp-content/themes/wp-dashboard/index.php on line 1
