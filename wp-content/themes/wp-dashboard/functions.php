@@ -184,7 +184,7 @@ function my_login_logo()
 		}
 		
         #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg);
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-colour.svg);
             padding-bottom: 60px;
 			background-size: 300px 80px;
 			background-position: center bottom;

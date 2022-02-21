@@ -1,3 +1,7 @@
+<?php
+    $user = wp_get_current_user();
+?>
+
 <header class="fixed top-0 left-0 z-20 flex w-full bg-quaternary h-12 text-white">
     <div class="flex justify-between lg:justify-center items-center w-full lg:w-60 p-3 bg-primary">
         <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" width="160" height="50" alt="aardwark logo"></a>
@@ -13,12 +17,12 @@
 
     <div class="hidden lg:flex flex-1 justify-between items-center">
         <div class="flex px-8">
-            <p>Vitajte <strong>Peter Stehlík</strong></p>
+            <p>Vitajte <strong><?php echo $user->display_name; ?></strong></p>
         </div>
 
         <div class="h-full">
             <div class="h-full">
-                <a class="flex justify-center items-center h-full px-4 bg-primary hover:bg-secondary" href="#">Odhlásiť sa</a>
+                <a class="flex justify-center items-center h-full px-4 bg-primary hover:bg-secondary" href="<?php echo wp_logout_url(); ?>">Odhlásiť sa</a>
             </div>
         </div>
     </div>
