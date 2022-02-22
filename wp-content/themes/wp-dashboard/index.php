@@ -7,9 +7,9 @@
 
 		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
 			<div class="container flex flex-col">
-				<form class="lg:mt-5 mb-5 lg:mb-10" action="#">
-					<input class="w-full max-w-md py-4 pl-5 pr-20 border-primary focus:border-quaternary focus:ring-primary bg-green rounded-full text-2xl bg-[url('/assets/img/icn-search.svg')] bg-no-repeat bg-right bg-[length:80px_40px]" type="text" placeholder="čo hľadáte?">
-				</form>
+				<?php if( is_home() ): ?>
+					<?php get_search_form(); ?> 
+				<?php endif; ?>
 
 				<div class="flex flex-wrap -mx-2 mb-8">
 					<?php $loop = 1; ?>

@@ -14,3 +14,7 @@ Stack trace:
 #3 /var/www/html/index.php(17): require('/var/www/html/w...')
 #4 {main}
   thrown in /var/www/html/wp-includes/post.php on line 5794
+[22-Feb-2022 13:35:17 UTC] PHP Notice:  Undefined property: SearchWP_Live_Search_Form::$last_version in /var/www/html/wp-content/plugins/searchwp-live-ajax-search/searchwp-live-ajax-search.php on line 68
+[22-Feb-2022 13:35:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/searchwp-live-ajax-search/searchwp-live-ajax-search.php:68) in /var/www/html/wp-includes/functions.php on line 6821
+[22-Feb-2022 13:35:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/searchwp-live-ajax-search/searchwp-live-ajax-search.php:68) in /var/www/html/wp-admin/includes/misc.php on line 1310
+[22-Feb-2022 13:35:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/searchwp-live-ajax-search/searchwp-live-ajax-search.php:68) in /var/www/html/wp-admin/admin-header.php on line 9
