@@ -6,3 +6,11 @@ Stack trace:
 #2 /var/www/html/index.php(17): require('/var/www/html/w...')
 #3 {main}
   thrown in /var/www/html/wp-content/themes/wp-dashboard/index.php on line 1
+[22-Feb-2022 12:44:25 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_page_children(), 0 passed in /var/www/html/wp-content/themes/wp-dashboard/page.php on line 24 and exactly 2 expected in /var/www/html/wp-includes/post.php:5794
+Stack trace:
+#0 /var/www/html/wp-content/themes/wp-dashboard/page.php(24): get_page_children()
+#1 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#2 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#3 /var/www/html/index.php(17): require('/var/www/html/w...')
+#4 {main}
+  thrown in /var/www/html/wp-includes/post.php on line 5794

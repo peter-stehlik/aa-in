@@ -1,5 +1,6 @@
 .vscode/
 wp-content/plugins/
+wp-content/uploads/
 wp-content/themes/wp-dashboard/package-lock.json
 wp-content/themes/wp-dashboard/node_modules/
 wp-content/themes/wp-dashboard/html/dist/
