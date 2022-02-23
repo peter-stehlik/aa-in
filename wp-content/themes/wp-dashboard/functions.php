@@ -85,11 +85,6 @@ if (!function_exists('page_setup')) :
         add_theme_support('responsive-embeds');
 		
 		// Register a new image sizes
-		add_image_size('social_image', 1200 , 627, true);
-
-		add_image_size('client_logo', 190 , 55, false);
-		add_image_size('client_logo_2x', 380 , 110, false);
-
 		add_image_size('member_square', 390 , 390, ['center', 'top']);
 		add_image_size('member_square_2x', 780 , 780, ['center', 'top']);
 		add_image_size('member_tall', 270 , 400, ['center', 'top']);
@@ -126,10 +121,10 @@ add_action('widgets_init', 'page_widgets_init');
 
 function add_theme_scripts()
 {
-    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=1.0');
+    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=1.2');
 	// wp_enqueue_style('theme-styles', get_stylesheet_uri() . '?v=3.4');
 	
-	wp_enqueue_script('aardwark', get_template_directory_uri().'/assets/js/custom.min.js', array(), 1.0, true);
+	wp_enqueue_script('aardwark', get_template_directory_uri().'/assets/js/custom.min.js', array(), 1.2, true);
 	
 }
   add_action('wp_enqueue_scripts', 'add_theme_scripts');
@@ -180,7 +175,12 @@ function my_login_logo()
     ?>
     <style type="text/css">
 		.login {
-			background:#eee;
+			background-color:#eee;
+            background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/aardwark-pink.svg');
+            background-repeat: no-repeat;
+            background-position: bottom 0 right -130px;
+            background-size: 300px 200px;
+            background-attachment: fixed;
 		}
 		
         #login h1 a, .login h1 a {

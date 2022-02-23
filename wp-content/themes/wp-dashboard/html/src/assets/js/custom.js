@@ -34,7 +34,7 @@ let AA = {
 		let build = $el => {
 			let $arr = `
 				<a class="js-show-sub-nav lg:hidden" href="javascript:void(0);">
-					<img src="./assets/img/arrow-full-right-medium.svg" width="30" height="20" alt="arrow white right">
+					<img src="/wp-content/themes/wp-dashboard/assets/img/arrow-full-right-medium.svg" width="30" height="20" alt="arrow white right">
 				</a>
 			`;
 			let subNav = $el.querySelector("ul");

@@ -102,6 +102,13 @@ body {
 }
 
 /*
+*	EDITOR
+*/
+.prose .btn {
+	@apply text-white;
+}
+
+/*
 *	FORMS
 */
 input:placeholder-shown,

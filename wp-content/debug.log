@@ -18,3 +18,11 @@ Stack trace:
 [22-Feb-2022 13:35:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/searchwp-live-ajax-search/searchwp-live-ajax-search.php:68) in /var/www/html/wp-includes/functions.php on line 6821
 [22-Feb-2022 13:35:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/searchwp-live-ajax-search/searchwp-live-ajax-search.php:68) in /var/www/html/wp-admin/includes/misc.php on line 1310
 [22-Feb-2022 13:35:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/searchwp-live-ajax-search/searchwp-live-ajax-search.php:68) in /var/www/html/wp-admin/admin-header.php on line 9
+[23-Feb-2022 07:48:01 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CONTAINS '[restrict]' OR 
+                          post_content CONTAINS '[n...' at line 2 for query SELECT * FROM in22_posts WHERE 
+                          post_content CONTAINS '[restrict]' OR 
+                          post_content CONTAINS '[not_logged_in]' OR
+                          post_content CONTAINS '[login_form]' OR
+                          post_content CONTAINS '[register_form]' OR
+                          LIMIT 1 made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/restrict-content/restrictcontent.php'), RC_Requirements_Check->__construct, RC_Requirements_Check->load, RC_Requirements_Check->restrict_content_check_posts_for_shortcode
+[23-Feb-2022 10:29:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/wp-content/themes/wp-dashboard/single-teambuildings.php on line 26

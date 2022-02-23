@@ -106,14 +106,7 @@ function prodClean(){
 }
 
 function prodStyles(){
-	return src(`${options.paths.dist.css}/**/*`).pipe(purgecss({
-	  content: ['src/**/*.{html,js}'],
-	  defaultExtractor: content => {
-		const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
-		const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || []
-		return broadMatches.concat(innerMatches)
-	  }
-	}))
+	return src(`${options.paths.dist.css}/**/*`)
 	.pipe(cleanCSS({compatibility: '*'}))
 	.pipe(dest(options.paths.build.css));
 }
