@@ -326,3 +326,45 @@ function my_mce4_options($init) {
     return $init;
 }
 add_filter('tiny_mce_before_init', 'my_mce4_options');
+
+
+/* BAZAR REZERVOVAT */
+add_action( 'wp_ajax_ref_filter', 'aa_reserve' );
+add_action( 'wp_ajax_nopriv_ref_filter', 'aa_reserve' );
+function aa_reserve()
+{
+	$resultHTML = "";
+	
+	$args = [
+		'post_type' => 'referencie',
+		'posts_per_page' => 12,
+		'tax_query' => [
+			[
+				'taxonomy' => 'cinnosti',
+				'field'    => 'slug',
+			],
+		],
+	];
+	$the_query = new WP_Query( $args );
+
+	if ( $the_query->have_posts() ):
+		while ( $the_query->have_posts() ):
+			$the_query->the_post();
+			
+			$img = get_the_post_thumbnail( $post, 'thumbnail', ['class' => 'w-100 h-auto img'] );
+						
+			$resultHTML .= "<a href='" . get_permalink() . "' class='col-3 image-item'>
+				<div class='position-relative'>
+					" . $img . "
+					<img src='" . get_template_directory_uri() . "/images/Group 6.svg' alt='" . get_the_title() . "'  class='position-absolute top-0 start-0 end-0 bottom-0 m-auto zoom-icon' />
+				</div>
+			</a>";
+	endwhile;
+	else:
+		$resultHTML = "Nič sme nenašli.";
+	endif;
+	
+	echo $resultHTML;
+	
+	die();
+}

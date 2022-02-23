@@ -25,7 +25,7 @@
                                         <span><?php the_field("cena"); ?>&euro;</span>
                                     </h2>
 
-                                    <a class="btn px-8 py-4 rounded-lg bg-primary hover:bg-secondary text-white font-semibold tracking-wide no-underline" href="javascript:void(0);">Rezervovať</a>
+                                    <a class="js-reserve-btn btn px-8 py-4 rounded-lg bg-primary hover:bg-secondary text-white font-semibold tracking-wide no-underline" href="javascript:void(0);">Rezervovať</a>
                                 </div>
 
                                 <div class="js-preloader hidden flex items-center justify-between p-4 mb-8 rounded-lg bg-gray-200">
@@ -93,6 +93,78 @@
 			</div>
 		</main>
 	</div>
+
+<script>
+var getJSON = function(url, qs_params) {
+  function buildQueryString(params) {
+    return Object.entries(params).map(d => `${d[0]}=${d[1]}`).join('&');
+  }
+
+  return new Promise((resolve, reject) => {
+    const qs = qs_params ? '?' + buildQueryString(qs_params) : '';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', `${url}${qs}`);
+
+    xhr.onload = function() {
+      if (xhr.status >= 200 && xhr.status < 400) {
+        resolve(JSON.parse(xhr.responseText));
+      } else {
+        resolve(xhr.responseText);
+      }
+    };
+    xhr.onerror = () => reject(xhr.statusText);
+    xhr.send();
+  });
+};
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+
+    var $reserve = document.querySelector(".js-reserve-btn");
+
+    $reserve.addEventListener("click", el => {
+        console.log("id: ");
+
+        getJSON("https://jsonplaceholder.typicode.com/comments", { postId: 1})
+   .then(data => {
+     console.log(data);
+   });
+
+        /*getJSON(
+            "<?php echo admin_url( 'admin-ajax.php' ); ?>",
+            {
+                action: 'aa_reserve',
+                postId: <?php $post->ID; ?>,
+            }
+        )
+        .then(data => {
+            console.log(data);
+        });*/
+    });
+/*
+	$(document).on("click", ".refer-text", function(){	
+		var type = $(this).attr("data-type");
+		var $refs = $(".refer-imgs");
+		
+		$refs.empty().html("<div class='text-center py-5'><img src='<?php echo get_template_directory_uri(); ?>/images/fading-circles.gif' width='' height='' alt='preloader' /></div>");
+		 
+		$.ajax({
+			url: "<?php echo admin_url( 'admin-ajax.php' ); ?>",
+			data: {
+				'action': 'aa_reserve',
+				'type' : type,
+			},
+			success:function(data) {
+				$refs.empty().html(data);
+			},
+			error: function(errorThrown){
+				console.log(errorThrown);
+			}
+		}); 
+	});  */            
+
+});
+</script>
 
 
 <?php get_footer("foot"); ?>
