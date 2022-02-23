@@ -39,3 +39,80 @@ Stack trace:
 [23-Feb-2022 11:56:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/advanced-custom-fields-pro/includes/local-json.php:225) in /var/www/html/wp-admin/admin-header.php on line 9
 [23-Feb-2022 11:57:03 UTC] PHP Warning:  file_put_contents(/var/www/html/wp-content/themes/wp-dashboard/acf-json/group_620a2c82e0a93.json): failed to open stream: Permission denied in /var/www/html/wp-content/plugins/advanced-custom-fields-pro/includes/local-json.php on line 225
 [23-Feb-2022 11:57:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/advanced-custom-fields-pro/includes/local-json.php:225) in /var/www/html/wp-admin/admin-header.php on line 9
+[23-Feb-2022 13:50:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function WP_Query() in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php:20
+Stack trace:
+#0 /var/www/html/wp-includes/template-loader.php(106): include()
+#1 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#2 /var/www/html/index.php(17): require('/var/www/html/w...')
+#3 {main}
+  thrown in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 20
+[23-Feb-2022 13:50:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function WP_Query() in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php:20
+Stack trace:
+#0 /var/www/html/wp-includes/template-loader.php(106): include()
+#1 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#2 /var/www/html/index.php(17): require('/var/www/html/w...')
+#3 {main}
+  thrown in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 20
+[23-Feb-2022 13:50:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function WP_Query() in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php:20
+Stack trace:
+#0 /var/www/html/wp-includes/template-loader.php(106): include()
+#1 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#2 /var/www/html/index.php(17): require('/var/www/html/w...')
+#3 {main}
+  thrown in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 20
+[23-Feb-2022 13:52:47 UTC] PHP Notice:  Undefined variable: the_query in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 26
+[23-Feb-2022 13:52:47 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php:26
+Stack trace:
+#0 /var/www/html/wp-includes/template-loader.php(106): include()
+#1 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#2 /var/www/html/index.php(17): require('/var/www/html/w...')
+#3 {main}
+  thrown in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 26
+[23-Feb-2022 14:11:44 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:11:44 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:11:44 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:11:44 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:11:44 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:11:44 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:12:04 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:12:04 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:12:04 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:12:04 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:12:04 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:12:04 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:12:40 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 45
+[23-Feb-2022 14:12:40 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 45
+[23-Feb-2022 14:12:40 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 45
+[23-Feb-2022 14:12:40 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 45
+[23-Feb-2022 14:12:40 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 45
+[23-Feb-2022 14:12:40 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 45
+[23-Feb-2022 14:12:58 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:12:58 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:12:58 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:12:58 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:12:58 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:12:58 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:03 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:03 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:03 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 53
+[23-Feb-2022 14:14:03 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 53
+[23-Feb-2022 14:14:03 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:03 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:03 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 53
+[23-Feb-2022 14:14:03 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 53
+[23-Feb-2022 14:14:03 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:03 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:03 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 53
+[23-Feb-2022 14:14:03 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 53
+[23-Feb-2022 14:14:52 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:52 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:52 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 53
+[23-Feb-2022 14:14:52 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 53
+[23-Feb-2022 14:14:52 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:52 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:52 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 53
+[23-Feb-2022 14:14:52 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 53
+[23-Feb-2022 14:14:52 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:52 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 44
+[23-Feb-2022 14:14:52 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 53
+[23-Feb-2022 14:14:52 UTC] PHP Warning:  A non-numeric value encountered in /var/www/html/wp-content/themes/wp-dashboard/page-teambuildings.php on line 53

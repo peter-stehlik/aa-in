@@ -63,7 +63,7 @@
 					<?php endif; ?>
 
                     <div class="mt-20">
-						<a class="btn px-8 py-4 rounded-lg bg-primary hover:bg-secondary text-white font-semibold tracking-wide no-underline" href="<?php echo home_url('teambuildings'); ?>">späť na Teambuildingy</a>
+						<a class="btn px-8 py-4 rounded-lg bg-primary hover:bg-secondary text-white font-semibold tracking-wide no-underline" href="<?php echo home_url('teambuildingy'); ?>">späť na Teambuildingy</a>
 					</div>
                 </div>
 
