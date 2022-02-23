@@ -7,7 +7,7 @@
 
 		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
 			<div class="container flex flex-col mx-auto lg:mx-0">
-                <div class="prose prose-a:text-secondary hover:prose-a:no-underline xl:w-3/4 lg:pt-8 pb-20 mx-auto">
+                <div class="prose prose-a:text-secondary hover:prose-a:no-underline max-w-[90vw] xl:w-3/4 lg:pt-8 pb-20 mx-auto">
                     <h1 class="mb-2"><?php the_title(); ?></h1>
 
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -21,7 +21,7 @@
                         <?php $images = get_field('galeria'); ?>
                             
                         <?php if( !empty( $images ) ): ?>
-                            <div class="glide glide relative">
+                            <div class="glide glide relative" style="max-width: 90vw;">
                                 <div data-glide-el="track" class="glide__track">
                                     <ul class="glide__slides" id="gallery">
                                         <?php foreach( $images as $image ): ?>
@@ -61,6 +61,10 @@
                     <?php endwhile; else : ?>
 						<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
 					<?php endif; ?>
+
+                    <div class="mt-20">
+						<a class="btn px-8 py-4 rounded-lg bg-primary hover:bg-secondary text-white font-semibold tracking-wide no-underline" href="<?php echo home_url('teambuildings'); ?>">späť na Teambuildingy</a>
+					</div>
                 </div>
 
 				<?php get_footer("html"); ?>

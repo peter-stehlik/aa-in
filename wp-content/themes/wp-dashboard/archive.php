@@ -20,7 +20,11 @@
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 							<div class="w-full sm:w-1/2 lg:w-1/3 mb-4 px-2 hover:drop-shadow-xl hover:-translate-y-1 transition-transform duration-500">
 								<article class="h-full <?php if( $loop == 2 || $loop == 6 ): ?> bg-quaternary <?php else: ?> bg-secondary <?php endif; ?> p-4 rounded-lg text-white">
-									<figure>
+									<figure class="relative">
+										<?php if( !empty(get_field("rezervovane")) ): ?>
+											<span class="absolute right-2 top-2 py-1 px-4 bg-green rounded-md text-black uppercase tracking-wide font-bold">rezervované</span>
+										<?php endif; ?>
+
 										<a href="<?php the_permalink(); ?>">
 											<?php if( get_the_post_thumbnail() ): ?>
 												<?php the_post_thumbnail("medium", ['class' => 'rounded-lg object-cover']) ?>
