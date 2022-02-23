@@ -40,7 +40,8 @@ body {
 	@apply flex justify-start px-4 py-1;
 }
 .left-nav > li:hover,
-.left-nav > li:hover > ul {
+.left-nav > li:hover > ul,
+.current-menu-parent {
 	@apply bg-primary;
 }
 .left-nav > li:hover > ul {
@@ -57,6 +58,9 @@ body {
 }
 .js-mob-sub-nav a {
 	@apply flex py-1 text-lg;
+}
+.current-menu-item {
+	@apply underline;
 }
 @screen lg {
 	.nav-wrap {
