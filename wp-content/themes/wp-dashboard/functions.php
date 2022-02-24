@@ -121,7 +121,7 @@ add_action('widgets_init', 'page_widgets_init');
 
 function add_theme_scripts()
 {
-    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=1.2');
+    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=1.3');
 	// wp_enqueue_style('theme-styles', get_stylesheet_uri() . '?v=3.4');
 	
 	wp_enqueue_script('aardwark', get_template_directory_uri().'/assets/js/custom.min.js', array(), 1.2, true);
@@ -224,8 +224,21 @@ function remove_jquery_migrate($scripts)
 // add_action('wp_default_scripts', 'remove_jquery_migrate');
 
 
+/**
+ * enqueue admin assets.
+ */
+function enqueue_admin_assets()
+{
+    $user_id = wp_get_current_user();
+    if ($user_id->ID != 1) { // 1 is superadmin, sees everything
+        wp_enqueue_style('vak-admin-css', get_template_directory_uri().'/assets/admin/admin.css?v=1.0');
+    }
+}
+add_action('admin_enqueue_scripts', 'enqueue_admin_assets');
+
+
 // REMOVE CERTAIN PAGES FROM LIST IN BACKEND
-//add_action('pre_get_posts', 'exclude_this_page');
+add_action('pre_get_posts', 'exclude_this_page');
 
 function exclude_this_page($query)
 {
@@ -238,7 +251,7 @@ function exclude_this_page($query)
     // WordPress 3.0
 
     if ('edit.php' == $pagenow && (get_query_var('post_type') && 'page' == get_query_var('post_type'))) {
-        $query->set('post__not_in', array());
+        $query->set('post__not_in', array(159,160,161,162,163));
     }
 
     return $query;
@@ -248,23 +261,21 @@ function exclude_this_page($query)
 // HELP DISPLAYED DIRECTLY ON DASHBOARD
 function custom_dashboard_widget() {
 	echo "
-	<strong>Ako jednoducho vytvoriť novú pracovnú ponuku?</strong><p>Vo výpise pracovných ponúk prejdite myšou cez nadpis a zo zobrazeného menu kliknite na ´Duplikovať´. Vytvorí sa kópia, ktorú stačí upraviť.</p>
-	<strong>Môžem zoradiť pracovné ponuky podľa vlastného poradia?</strong><p>Áno, vo výpise Pracovných ponúk ich zoraďte spôsobom ´drag and drop´.</p>
+    <strong>Ako funguje Bazoš?</strong><p>Ak užívateľ stlačí tlačidlo 'Rezervovať', administrátorovi príde emailom notifikácia o tom, kto má záujem tovar kúpiť. Zároveň na stránke bude pri produkte vyznačené, že je rezervovaný a ďalšia osoba už nebude mať prístup si ho rezervovať.</p>
+    <p>Rezerváciu je možné zrušiť, keď v detaile produktu (administrácia) vymažete email z políčka 'Rezervované'.</p>
+    <strong>Ako upozorním ostatných o novom príspevku v Intranete?</strong><p>V administrácii príspevku (Aktuality, Teambuilding, Bazoš) máte v pravom stĺpci možnosť 'Upozorniť aardwarkáčov o novom príspevku'. Ak označíte 'áno' (a políčko 'Rozposlané dňa' je prázdne), po uložení príspevku sa všetkým registrovaným členom rozpošle emailová notifikácia o novom príspevku.</p>
+    <p>Ak z nejakého dôvodu chcete notifikáciu poslať opakovane, vymažte políčko 'Rozposlané dňa'. Emaily sa rozposielajú iba v tom prípade, ak je prázdne.</p>
+    <strong>Ako sú zoradené akcie v teambuildingoch?</strong><p>Akcie sú zoradené podľa dátumu. Ten viete meniť na detaile, v pravom stĺpci hore ako dátum 'Publikované dňa'.</p>
+    <strong>Ako zamknúť podstránku len pre konkrétnu skupinu používateľov?</strong><p>V administrácii každého príspevku máte na spodu možnosť zvoliť 'Restrict this content'. Zvoľte 'Members with a certain role', kde zaškrtnite kto môže príspevok vidieť. Odporúčame vždy zaškrtávať aj 'Administrátor'.</p>
 	<strong>Ako zobrazím stránku z administrácie?</strong><p>Vľavo úplne hore je ikonka domčeka a www adresa stránky. Po nadídení myšou sa vám ukáže ponuka 'Navštíviť stránku'. Otvárajte vždy na novej karte, pretože po jednoduchom kliknutí sa odhlásite z administrácie.</p>
 	<strong>Ako upravim stránku?</strong><p>Z ľavého menu vyberte 'Stránky'.</p>
-	<strong>Ako vytvorím tlačidlo?</strong><p>Tzv. krátkym kódom <em>[button type='farba' link='odkaz-na-stranku']text odkazu[/button]</em>.
-		<p>Farbu máte na výber: purple, pink, white.</p>
-		<p>Za link dáte buď celú URL adresu, alebo ak chcete nalinkovať formuláre: všeobecný kontaktný formulár: '#service', pracovná ponuka: ´#jobs´.</p>
-		<p>Napr. Ružové tlačidlo s odkazom na všeobecný formulár a textom ´Kontaktujte nás´: <br> [button type='pink' link='#service']Kontaktujte nás[/button]</p>
-	<strong>Ako zmením jazyk, v ktorom upravujem stránku?</strong><p>Na hornej čiernej lište je vlajka a jazyk, ktorý môžete zmeniť.</p>
-	<strong>Ako nastaviť SEO a sociálne siete?</strong><p>Buď cez detail stránky, resp. pracovnej ponuky, alebo všeobecné nastavenia nájdete cez Aardwark - Nastavenia.</p>
 	<strong>Ako zmením heslo?</strong><p>Cez položku 'Profil'.</p>
 	";
 }
 function add_custom_dashboard_widget() {
 	wp_add_dashboard_widget('custom_dashboard_widget', 'Užitočné informácie pri úpravách na stránke.', 'custom_dashboard_widget');
 }
-//add_action('wp_dashboard_setup', 'add_custom_dashboard_widget');
+add_action('wp_dashboard_setup', 'add_custom_dashboard_widget');
 // END HELP DISPLAYED DIRECTLY ON DASHBOARD
 
 /*
@@ -364,14 +375,14 @@ function aa_reserve()
 }
 
 
-
+/* UPOZORNENIE O NOVOM OBSAHU */
 function notify_users($post_id, $post, $update){
     $notifier = get_field("rozposlat_email", $post_id);
 
-    if( $notifier === "yes" ){
+    if( $notifier == "yes" ){
         $sent_date = get_field("rozposlane_dna", $post_id);
         
-        if( !$sent_date ){
+        if( !empty($sent_date) ){
             $users = get_users();
 
             foreach ( $users as $user ) {

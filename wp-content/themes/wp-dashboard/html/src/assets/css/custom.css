@@ -41,7 +41,8 @@ body {
 }
 .left-nav > li:hover,
 .left-nav > li:hover > ul,
-.current-menu-parent {
+.current-menu-parent,
+.current-menu-item {
 	@apply bg-primary;
 }
 .left-nav > li:hover > ul {
@@ -59,7 +60,7 @@ body {
 .js-mob-sub-nav a {
 	@apply flex py-1 text-lg;
 }
-.current-menu-item {
+.current-menu-parent .current-menu-item {
 	@apply underline;
 }
 @screen lg {
