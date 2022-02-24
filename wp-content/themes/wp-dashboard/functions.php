@@ -329,42 +329,74 @@ add_filter('tiny_mce_before_init', 'my_mce4_options');
 
 
 /* BAZAR REZERVOVAT */
-add_action( 'wp_ajax_ref_filter', 'aa_reserve' );
-add_action( 'wp_ajax_nopriv_ref_filter', 'aa_reserve' );
+add_action( 'wp_ajax_aa_reserve', 'aa_reserve' );
+add_action( 'wp_ajax_nopriv_aa_reserve', 'aa_reserve' );
 function aa_reserve()
 {
-	$resultHTML = "";
-	
-	$args = [
-		'post_type' => 'referencie',
-		'posts_per_page' => 12,
-		'tax_query' => [
-			[
-				'taxonomy' => 'cinnosti',
-				'field'    => 'slug',
-			],
-		],
-	];
-	$the_query = new WP_Query( $args );
+	$result = true;
 
-	if ( $the_query->have_posts() ):
-		while ( $the_query->have_posts() ):
-			$the_query->the_post();
-			
-			$img = get_the_post_thumbnail( $post, 'thumbnail', ['class' => 'w-100 h-auto img'] );
-						
-			$resultHTML .= "<a href='" . get_permalink() . "' class='col-3 image-item'>
-				<div class='position-relative'>
-					" . $img . "
-					<img src='" . get_template_directory_uri() . "/images/Group 6.svg' alt='" . get_the_title() . "'  class='position-absolute top-0 start-0 end-0 bottom-0 m-auto zoom-icon' />
-				</div>
-			</a>";
-	endwhile;
-	else:
-		$resultHTML = "Nič sme nenašli.";
-	endif;
+    $postId = $_GET["postId"];
+    $email = $_GET["email"];
+    $title = $_GET["title"];
+    $permalink = $_GET["permalink"];
 	
-	echo $resultHTML;
+    if( $postId && $email && $title && $permalink ){
+        update_field("rezervovane", $email, $postId);
+
+        $to = "ahoj.wappka@gmail.com";
+        $subject = "AA Bazos rezervacia";
+        $message = "Na bazosi si " . $email . " rezervoval <a href='" . $permalink . "'> " . $title . "</a>.";
+		
+		$headers = '';		
+		$headers .= 'MIME-Version: 1.0' . "\r\n";
+		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+		$headers .= 'From: Aardwark Bazos <board@aardwark.com>' . "\r\n";
+		$headers .= 'Reply-To: Aardwark <board@aardwark.com>' . "\r\n";
+
+        mail( $to, $subject, $message, $headers );
+    } else {
+        $result = false;
+    }
+	
+	echo $result;
 	
 	die();
 }
+
+
+
+function notify_users($post_id, $post, $update){
+    $notifier = get_field("rozposlat_email", $post_id);
+
+    if( $notifier === "yes" ){
+        $sent_date = get_field("rozposlane_dna", $post_id);
+        
+        if( !$sent_date ){
+            $users = get_users();
+
+            foreach ( $users as $user ) {
+                $to = $user->user_email;
+                
+                // $to = "ahoj.wappka@gmail.com";
+                
+                $subject = "AA Intranet dáva do pozornosti";
+                $message = "<h2>Čo je nové?</h2>";
+                $message .= "<p>Prečítajte si príspevok: <a href='" . get_permalink($post_id) . "'> " . get_the_title($post_id) . "</a>.</p>";
+                $message .= "<hr><p><small>Špecialisti na Enterprise IT riešenia</small></p>";
+                
+                $headers = '';		
+                $headers .= 'MIME-Version: 1.0' . "\r\n";
+                $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                $headers .= 'From: Aardwark Intranet <board@aardwark.com>' . "\r\n";
+                $headers .= 'Reply-To: Aardwark Intranet <board@aardwark.com>' . "\r\n";
+                    
+                mail( $to, $subject, $message, $headers );
+            }
+
+            $now = date("d.m.Y H:i:s");
+            update_field("rozposlane_dna", $now, $post_id);
+        }
+    }
+}
+
+add_action("save_post", "notify_users", 10, 3);
