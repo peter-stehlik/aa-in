@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/aardwark-apple-touch-icon.png">
+	
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+
+	<title>Text | Aardwark</title>
+
+	<meta name="robots" content="noindex,nofollow">
+
+	<link rel="stylesheet" href="./assets/css/custom.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed top-0 left-0 z-20 flex w-full bg-quaternary h-12 text-white">
+		<div class="flex justify-between lg:justify-center items-center w-full lg:w-60 p-3 bg-primary">
+			<a href="#"><img src="./assets/img/logo.svg" width="160" height="50" alt=""></a>
+
+			<a class="relative z-20 js-nav-toggler flex lg:hidden" href="javascript:void(0);">
+				<svg class="w-10 h-8" id="hamburger">
+					<line stroke="#fff" x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--top"></line>
+					<line stroke="#fff" x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--middle"></line>
+					<line stroke="#fff" x1="50%" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--bottom"></line>
+				</svg>			  
+			</a>
+		</div>
+
+		<div class="hidden lg:flex flex-1 justify-between items-center">
+			<div class="flex px-8">
+				<p>Vitajte <strong>Peter Stehlík</strong></p>
+			</div>
+
+			<div class="h-full">
+				<div class="h-full">
+					<a class="flex justify-center items-center h-full px-4 bg-primary hover:bg-secondary" href="#">Odhlásiť sa</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="flex h-screen">		
+		<aside class="nav-wrap fixed left-0 top-12 z-10 lg:flex flex-col w-full lg:w-60 lg:pt-10 h-screen bg-secondary text-white">
+			<div class="sub-nav-wrap w-[200%] flex lg:w-full">
+				<div class="flex-1">
+					<form class="mt-5 mb-2 mx-4" action="/">
+						<input class="w-full py-2 pl-5 pr-20 border-white focus:border-quaternary focus:ring-primary bg-green rounded-full text-lg bg-[url('/intranet/wp-content/themes/wp-dashboard/assets/img/icn-search.svg')] bg-no-repeat bg-right bg-[length:60px_30px]" type="text" placeholder="čo hľadáte?">
+					</form>
+
+					<ul class="left-nav lg:pt-5">
+						<li><a href="#">Aktuality</a></li>
+						<li><a href="#">Zamestnanecký portál</a></li>
+						<li><a href="#">Onboarding</a></li>
+						<li><a href="#">Užitočné informácie</a>
+							<ul>
+								<li><a href="#">Dovolenky</a></li>
+								<li><a href="#">Vnútorný predpis</a></li>
+								<li><a href="#">Cestovný príkaz - postup</a></li>
+								<li><a href="#">Služobné cesty</a></li>
+								<li><a href="#">Info o spracovaní osobných údajov</a></li>
+								<li><a href="#">Edumio školenia</a></li>
+								<li><a href="#">Potvrdenia pre zamestnancov</a></li>
+								<li><a href="#">Formy stravovania - dotazník</a></li>
+								<li><a href="#">Multisport karty</a></li>
+								<li><a href="#">Eset licencia</a></li>
+								<li><a href="#">Office 365</a></li>
+								<li><a href="#">Odkúpenie hw</a></li>
+								<li><a href="#">Referral program</a></li>
+								<li><a href="#">Užitočné kontakty</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Zoho</a>
+							<ul>
+								<li><a href="#">ZOHO manuál + info o zohosupport</a></li>
+								<li><a href="#">Manuály pre adminov</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Vzdelávanie</a></li>
+						<li><a href="#">Benefity</a></li>
+						<li><a href="#">Teambuildingy</a></li>
+						<li><a href="#">AA bazoš</a></li>
+					</ul>
+
+					<div class="lg:hidden mt-2 px-4">
+						<hr>
+					</div>
+
+					<ul class="left-nav lg:hidden">
+						<li><a href="#">Odhlásiť</a></li>
+					</ul>
+				</div>
+
+				<div class="flex-1 lg:hidden overflow-auto h-screen">
+					<div class="pt-5 pb-5 px-4">
+						<a class="js-back-mob-nav inline-flex mb-4 text-xl" href="javascript:void(0);">
+							<img src="./assets/img/arrow-full-right-medium.svg" width="30" height="20" alt="arrow white right" style="transform: rotate(180deg);">
+							
+							<span class="flex ml-2">Späť</span>
+						</a>
+
+						<hr class="mb-4">
+
+						<ul class="js-mob-sub-nav">
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</aside>
+
+		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
+			<div class="container flex flex-col mx-auto lg:mx-0">
+                <div class="xl:w-3/4 lg:pt-8 pb-20 mx-auto">
+					<div class="prose prose-a:text-secondary hover:prose-a:no-underline">
+						<h1>Monitor 1920x1366px</h1>
+
+						<img class="rounded-lg" src="./assets/img/og-image.jpg" width="800" height="600" alt="">
+
+						<div class="js-reserve flex items-center justify-between p-4 mb-8 rounded-lg bg-gray-200">
+							<h2 class="my-0">
+								<span class="block text-sm font-normal">Cena: </span>
+								<span>280e</span>
+							</h2>
+
+							<a class="btn px-8 py-4 rounded-lg bg-primary hover:bg-secondary text-white font-semibold tracking-wide no-underline" href="/">Rezervovať</a>
+						</div>
+
+                        <p>Popis produktu, keď užívateľ klikne na "Rezervovať", zobrazí sa preloader a následne zelený box, pričom cena a tlačidlo sa skryjú.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic id ipsam dolorum harum aperiam minus saepe minima eveniet accusamus quaerat repellat officia unde, suscipit impedit ratione optio odio, debitis ad.</p>
+
+						<div class="js-preloader flex items-center justify-between p-4 mb-8 rounded-lg bg-gray-200">
+							<div class="flex items-center justify-center w-full">
+								<svg version="1.1" id="Layer_1" x="0px" y="0px"
+									width="150px" height="150px" viewBox="0 0 150 150" enable-background="new 0 0 150 150" xml:space="preserve">
+								<g opacity="0.8">
+									<path fill="#6846A0" d="M61.015,85.29c6.807,12.76,23.475,16.332,36.572,11.57c19.05-8.334,27.384-28.574,26.193-48.815
+										c13.097,17.859,0,41.671-15.478,53.577c-14.287,9.525-32.146,8.334-42.637-4.357C62.572,92.624,61.205,88.323,61.015,85.29z"/>
+									<path fill="#6846A0" d="M130.992,88.176c-7.212,24.161-36.977,36.067-59.598,26.542c-15.478-7.144-26.193-28.574-13.097-42.862
+										c-4.762,16.668,7.144,34.527,23.812,36.909s34.527-3.572,44.3-17.89C129.181,87.627,130.731,86.463,130.992,88.176z"/>
+									<path fill="#6846A0" d="M105.373,123.588c-24.455,16.133-58.982-4.107-63.744-32.682C40.438,77.81,49.963,61.142,64.25,61.142
+										c-15.478,9.525-17.859,34.527-4.762,47.624c10.715,9.525,25.003,16.668,40.905,13.527
+										C104.616,121.896,106.482,122.156,105.373,123.588z"/>
+									<path fill="#6846A0" d="M61.118,130.35c-21.871-7.297-32.586-29.919-29.014-51.349c2.381-10.715,8.334-19.05,17.859-23.812
+										c8.334-3.572,19.05-3.572,26.193,2.381c-16.668-3.572-33.337,9.525-34.527,26.193c-1.191,15.478,4.762,30.956,17.091,42.228
+										C61.924,128.699,62.992,130.182,61.118,130.35z"/>
+									<path fill="#6846A0" d="M87.605,65.255c-5.496-10.066-16.211-16.019-28.117-13.638c-25.003,4.762-35.718,29.765-34.527,52.386
+										c-7.144-17.859-4.762-38.099,9.525-51.196c14.287-11.906,35.718-13.097,49.774,0.549C86.849,58.095,87.747,62.344,87.605,65.255z"
+										/>
+									<path fill="#6846A0" d="M90.294,77.561c4.912-12.848-2.232-25.944-14.138-33.088c-21.431-11.906-39.29,3.572-57.149,14.287
+										c9.525-22.621,36.909-33.337,59.53-23.812c11.906,5.953,20.24,19.05,17.957,31.839C94.909,71.954,92.49,75.593,90.294,77.561z"/>
+									<path fill="#6846A0" d="M48.564,24.217c8.077-9.391,30.608-2.197,39.279,2.904c13.01,7.655,20.772,22.57,19.27,37.593
+										C105.921,76.62,96.396,88.525,83.3,87.335c14.287-4.762,17.859-20.24,14.287-33.337c-5.953-17.859-25.003-29.765-44.165-28.052
+										C49.24,25.982,47.408,25.562,48.564,24.217z"/>
+									<path fill="#6846A0" d="M91.241,19.881c26.587,9.114,37.302,42.451,19.443,65.072c-9.525,10.715-26.193,16.668-38.099,5.953
+										c9.525,3.572,19.05,0,26.193-5.953c17.859-16.668,11.906-45.243-5.121-60.326C90.608,21.694,89.544,20.078,91.241,19.881z"/>
+									<animateTransform attributeName="transform"
+													attributeType="XML"
+													type="rotate"
+													from="0 75 75"
+													to="360 75 75"
+													dur="2s"
+													repeatCount="indefinite"/>
+								</g>
+								</svg>
+							</div>
+						</div>
+
+						<div class="js-reserved flex items-center justify-center p-8 mb-8 rounded-lg bg-green">
+							<h2 class="my-0 uppercase tracking-wider text-white text-3xl">Rezervované</h2>
+						</div>
+					</div>
+
+					<div class="mt-20">
+						<a class="btn px-8 py-4 rounded-lg bg-primary hover:bg-secondary text-white font-semibold tracking-wide no-underline" href="#">späť na Bazár</a>
+					</div>
+                </div>
+
+				<footer class="mt-auto pt-10 pb-4">
+					<hr class="mb-4">
+
+					<p class="text-gray-400"> Aardwark 2022 <span class="block lg:inline">&copy; Špecialisti na Enterprise IT riešenia</span></p>
+				</footer>
+			</div>
+		</main>
+	</div>
+
+
+    <script src="./assets/js/custom.js"></script>
+</body>
+</html>
