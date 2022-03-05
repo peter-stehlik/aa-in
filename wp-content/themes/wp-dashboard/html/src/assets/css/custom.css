@@ -57,6 +57,18 @@ body {
 .left-nav > li > ul a:hover {
 	@apply bg-secondary;
 }
+.left-nav li[class*="aa-"] {
+	@apply hidden;
+}
+body.aa-tpp .left-nav li.aa-tpp,
+body.aa-sro .left-nav li.aa-sro,
+body.aa-student .left-nav li.aa-student,
+body.aa-zl .left-nav li.aa-zl {
+	@apply block;
+}
+body.administrator .left-nav li {
+	display: block !important;
+}
 .js-mob-sub-nav a {
 	@apply flex py-1 text-lg;
 }
