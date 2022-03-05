@@ -67,7 +67,7 @@ body.aa-zl .left-nav li.aa-zl {
 	@apply block;
 }
 body.administrator .left-nav li {
-	display: block !important;
+	display: flex !important;
 }
 .js-mob-sub-nav a {
 	@apply flex py-1 text-lg;
