@@ -124,6 +124,45 @@ body.administrator .left-nav li {
 .prose .btn {
 	@apply text-white;
 }
+.wp-block-file {
+	@apply flex items-center justify-between p-4 mb-8 rounded-lg bg-gray-200;
+}
+.wp-block-file a {
+	@apply no-underline text-black font-bold;
+}
+.wp-block-file .wp-block-file__button {
+	@apply btn px-8 py-4 rounded-lg bg-primary hover:bg-secondary text-white font-semibold tracking-wide no-underline text-base;
+}
+.wp-block-table tr {
+	@apply border-t border-gray-300;
+}
+.wp-block-table tr:first-child {
+	@apply border-0;
+}
+.wp-block-table th,
+.wp-block-table td {
+	@apply p-1;
+}
+.prose .wp-block-separator {
+	@apply border-t border-dotted border-gray-400;
+}
+.prose .wp-block-media-text * {
+	margin: 0 !important;
+}
+.wp-block-media-text {
+	@apply bg-quaternary text-white;
+}
+.wp-block-media-text__content {
+	@apply p-4;
+}
+.wp-block-media-text__content a {
+	@apply text-white no-underline;
+}
+.has-large-font-size {
+	font-size: 1.5rem !important;
+	line-height: 1.25 !important;
+	@apply pb-4;
+}
 
 /*
 *	FORMS
