@@ -23,7 +23,7 @@ module.exports = {
             /* padding: "0 1rem",
             margin: "0 auto", */
             width: "100%",
-            minHeight: "calc(100vh - 7rem)",
+            // minHeight: "calc(100vh - 7rem)",
   
             // Breakpoints
             "@screen sm": {

@@ -9,7 +9,7 @@ body {
 body {
 	background-color: #f5f5f5;
 }
-@screen xl {
+/*@screen xl {
 	body {
 		background-image: url('../img/aardwark-pink.svg');
 		background-repeat: no-repeat;
@@ -17,7 +17,7 @@ body {
 		background-size: 300px 200px;
 		background-attachment: fixed;
 	}
-}
+}*/
 
 /*
 *	NAVIGATION
@@ -34,10 +34,10 @@ body {
 	@apply mt-2 text-lg;
 }
 .left-nav > li {
-	@apply relative flex justify-between lg:justify-end;
+	@apply relative flex justify-between;
 }
 .left-nav > li > a {
-	@apply flex justify-start px-4 py-1;
+	@apply flex justify-start px-4 py-1 tracking-wide font-semibold;
 }
 .left-nav > li:hover,
 .left-nav > li:hover > ul,
@@ -49,10 +49,10 @@ body {
 	@apply hidden lg:flex flex-col;
 }
 .left-nav > li > ul {
-	@apply absolute left-full top-0 w-60 hidden;
+	@apply absolute left-full top-0 w-60 lg:drop-shadow-2xl hidden;
 }
 .left-nav > li > ul a {
-	@apply flex px-4 py-1;
+	@apply flex w-full px-4 py-1;
 }
 .left-nav > li > ul a:hover {
 	@apply bg-secondary;
@@ -82,8 +82,12 @@ body.administrator .left-nav li {
 	.left-nav {
 		@apply text-base;
 	}
-	.left-nav > li > a {
+	/*.left-nav > li > a {
 		@apply justify-end;
+	} */
+	.menu-item-has-children:after {
+		content:"+";
+		@apply relative top-1 pr-4 font-bold;
 	}
 }
 .sub-nav-wrap {
@@ -91,6 +95,27 @@ body.administrator .left-nav li {
 }
 .sub-nav-wrap.is-opened {
 	transform: translateX(-50%);
+}
+.aside-aardwark {
+	animation: slidein .4s cubic-bezier(0.215, 0.610, 0.355, 1) .2s forwards;
+}
+@keyframes slidein {
+	from {
+	  transform: translateX(0%);
+	}
+  
+	to {
+	  transform: translateX(200px);
+	}
+  }
+.fnav {
+	@apply mb-8;
+}
+.fnav li {
+	@apply mb-2;
+}
+.fnav li a:hover {
+	@apply text-quaternary;
 }
 
 /*
