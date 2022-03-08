@@ -11,8 +11,28 @@
         <?php get_sidebar(); ?>
 
 		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
-            <div class="container flex flex-col">
-				<h1 class="md:max-w-[704px] pr-8 md:pr-0 md:mt-5 md:mb-8 text-right md:text-left text-primary text-3xl lg:text-6xl">Tímové akcie</h1>
+            <div class="bg-primary px-4 lg:px-8 rounded-lg">
+                <div class="container mx-auto">
+                    <div class="flex flex-col lg:flex-row lg:h-[380px]">
+                        <div class="flex-1 flex flex-col justify-center pt-10 lg:py-20">
+                            <div class="content flex-1 order-2 lg:order-1 text-white">
+                                <p class="mb-4 lg:mb-8 text-quaternary tracking-wide">Aardwark</p>
+
+                                <h1 class="mb-8 text-4xl lg:text-6xl"><?php the_title(); ?></h1>
+
+                                <a class="inline-flex justify-center items-center min-w-[250px] px-8 py-4 mt-1 lg:mt-0 rounded-full focus:bg-green font-semibold transition-colors  bg-secondary hover:bg-quaternary text-white " href="#detail">Pozrieť viac</a>
+                            </div>
+                        </div>
+
+                        <div class="svg-wrap flex-1">
+                            <?php echo get_template_part("template-parts/svg/content", "animation-green-aardwark"); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container flex flex-col mx-auto" id="detail">
+				<h1 class="md:max-w-[704px] pr-8 md:pr-0 md:mt-5 md:mb-8 text-right md:text-left text-primary text-3xl lg:text-6xl"></h1>
 
                 <?php
                     $actions = [];
@@ -80,13 +100,9 @@
                         <?php $current = $item["year"]; ?>
                     <?php endforeach; ?>
 				</div>
-
-				<footer class="mt-auto pt-10 pb-4">
-					<hr class="mb-4">
-
-					<p class="text-gray-400"> Aardwark 2022 <span class="block lg:inline">&copy; Špecialisti na Enterprise IT riešenia</span></p>
-				</footer>
 			</div>
+
+            <?php get_footer("html"); ?> 
 		</main>
 	</div>
 

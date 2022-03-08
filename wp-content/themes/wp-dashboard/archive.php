@@ -5,14 +5,35 @@
         <?php get_sidebar(); ?>
 
 		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
-			<div class="container flex flex-col">
-                <?php
-                    $archiveTitle = get_the_archive_title();
-                    $archiveTitleArr = explode(":", $archiveTitle);
-                    array_shift($archiveTitleArr);
-                    $archiveTitle = implode(" ", $archiveTitleArr);
-                ?>
-                <h1 class="lg:mt-5 mb-8 text-primary text-3xl lg:text-6xl"><?php echo $archiveTitle; ?></h1>
+			<?php
+				$archiveTitle = get_the_archive_title();
+				$archiveTitleArr = explode(":", $archiveTitle);
+				array_shift($archiveTitleArr);
+				$archiveTitle = implode(" ", $archiveTitleArr);
+			?>
+
+			<div class="bg-primary px-4 lg:px-8 mb-8 rounded-lg">
+				<div class="container mx-auto">
+					<div class="flex flex-col lg:flex-row lg:h-[380px]">
+						<div class="flex-1 flex flex-col justify-center pt-10 lg:py-20">
+							<div class="content flex-1 order-2 lg:order-1 text-white">
+								<p class="mb-4 lg:mb-8 text-quaternary tracking-wide">Aardwark</p>
+
+								<h1 class="mb-8 text-4xl lg:text-6xl"><?php echo $archiveTitle; ?></h1>
+
+								<a class="inline-flex justify-center items-center min-w-[250px] px-8 py-4 mt-1 lg:mt-0 rounded-full focus:bg-green font-semibold transition-colors  bg-secondary hover:bg-quaternary text-white " href="#detail">Pozrieť viac</a>
+							</div>
+						</div>
+
+						<div class="svg-wrap flex-1">
+							<?php echo get_template_part("template-parts/svg/content", "animation-green-aardwark"); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container flex flex-col mx-auto" id="detail">
+				<h1 class="lg:mt-5 mb-8 text-primary text-3xl lg:text-6xl"><?php echo $archiveTitle; ?></h1>
 
 				<div class="flex flex-wrap -mx-2 mb-8">
 					<?php $loop = 1; ?>
@@ -49,7 +70,7 @@
 					<?php $loop++; endwhile; ?>
 
 					<div class="w-full py-4">
-						<div class="flex justify-between items-center w-full px-2 mt-8 mb-20">
+						<div class="btn-secondary-wrap flex justify-between items-center w-full px-2 mt-8">
 							<?php previous_posts_link( 'Predošlé' ); ?>
 							<?php next_posts_link( 'Ďalšie' ); ?>
 						</div>
@@ -59,9 +80,9 @@
 						<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
 					<?php endif; ?>
 				</div>
-
-                <?php get_footer("html"); ?>
 			</div>
+
+			<?php get_footer("html"); ?>
 		</main>
 	</div>
 

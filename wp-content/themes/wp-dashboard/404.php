@@ -11,9 +11,9 @@
 
                     <p>Skontrolujte si URL adresu alebo využite navigáciu.</p>
                 </div>
-
-				<?php get_footer("html"); ?>
 			</div>
+
+			<?php get_footer("html"); ?>
 		</main>
 	</div>
 

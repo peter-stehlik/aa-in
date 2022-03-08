@@ -2,7 +2,7 @@
     <div class="container mx-auto">
         <div class="flex flex-col lg:flex-row text-white">
             <div class="lg:w-1/2 mb-8 lg:mb-0">
-                <span class="flex mb-4 lg:mb-10 text-3xl lg:text-5xl">Aardwark</span>
+                <!-- <span class="flex mb-4 lg:mb-10 text-3xl lg:text-5xl">Aardwark</span> -->
 
                 <div class="rounded-wrap">
                     <?php

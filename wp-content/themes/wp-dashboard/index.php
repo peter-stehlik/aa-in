@@ -5,7 +5,7 @@
         <?php get_sidebar(); ?>
 
 		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
-		<div class="bg-primary px-4 lg:px-8 mb-8 rounded-lg">
+			<div class="bg-primary px-4 lg:px-8 mb-8 rounded-lg">
 				<div class="container mx-auto">
 					<div class="flex flex-col lg:flex-row lg:h-[380px]">
 						<div class="flex-1 flex flex-col justify-center pt-10 lg:py-20">
