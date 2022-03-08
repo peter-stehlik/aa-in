@@ -18,6 +18,15 @@ body {
 		background-attachment: fixed;
 	}
 }*/
+.svg-wrap svg {
+	@apply lg:h-full;
+}
+.rounded-wrap img {
+	border-radius: .5rem !important;
+}
+.btn-secondary-wrap a {
+	@apply btn px-8 py-4 border-2 border-primary rounded-full bg-white hover:bg-quaternary text-primary font-semibold tracking-wide no-underline;
+}
 
 /*
 *	NAVIGATION

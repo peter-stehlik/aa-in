@@ -1,5 +1,4 @@
 <?php get_header('head'); ?>
-<body <?php body_class(); ?>>
     <?php get_header('html'); ?>
 
 	<div class="flex h-screen">		

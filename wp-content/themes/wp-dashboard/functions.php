@@ -107,7 +107,7 @@ function page_widgets_init()
 {
     register_sidebar(
         array(
-            'name' => __('Bočný panel', 'aardwark'),
+            'name' => __('Pätička', 'aardwark'),
             'id' => 'sidebar-3',
             'description' => __('Add widgets here to appear in your sidebar.', 'aardwark'),
             'before_widget' => '<section id="%1$s" class="widget %2$s mb-4 pl-4 pb-4 border-bottom">',
@@ -121,10 +121,10 @@ add_action('widgets_init', 'page_widgets_init');
 
 function add_theme_scripts()
 {
-    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=1.3');
+    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=2.1');
 	// wp_enqueue_style('theme-styles', get_stylesheet_uri() . '?v=3.4');
 	
-	wp_enqueue_script('aardwark', get_template_directory_uri().'/assets/js/custom.min.js', array(), 1.2, true);
+	wp_enqueue_script('aardwark', get_template_directory_uri().'/assets/js/custom.min.js', array(), 1.3, true);
 	
 }
   add_action('wp_enqueue_scripts', 'add_theme_scripts');
@@ -231,7 +231,7 @@ function enqueue_admin_assets()
 {
     $user_id = wp_get_current_user();
     if ($user_id->ID != 1) { // 1 is superadmin, sees everything
-        wp_enqueue_style('vak-admin-css', get_template_directory_uri().'/assets/admin/admin.css?v=1.0');
+        wp_enqueue_style('vak-admin-css', get_template_directory_uri().'/assets/admin/admin.css?v=1.1');
     }
 }
 add_action('admin_enqueue_scripts', 'enqueue_admin_assets');
@@ -337,6 +337,13 @@ function my_mce4_options($init) {
     return $init;
 }
 add_filter('tiny_mce_before_init', 'my_mce4_options');
+
+
+function rjs_lwp_contactform_css_js() {
+    wp_dequeue_script( 'contact-form-7' );
+    // wp_dequeue_style( 'contact-form-7' );
+}
+add_action( 'wp_enqueue_scripts', 'rjs_lwp_contactform_css_js');
 
 
 /* BAZAR REZERVOVAT */

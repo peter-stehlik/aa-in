@@ -1,5 +1,4 @@
 <?php get_header('head'); ?>
-<body <?php body_class(); ?>>
     <?php get_header('html'); ?>
 
 	<div class="flex h-screen">		
@@ -140,7 +139,7 @@
                 )
                 .then(data => {
                     console.log(data);
-
+                    
                     if( data = 1 ){
                         document.querySelector(".js-preloader").classList.add("hidden");
                         document.querySelector(".js-reserved").classList.remove("hidden");

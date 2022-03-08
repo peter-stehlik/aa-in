@@ -1,5 +1,4 @@
 <?php get_header('head'); ?>
-<body <?php body_class(); ?>>
     <?php get_header('html'); ?>
 
 	<div class="flex h-screen">		
@@ -13,6 +12,7 @@
                     <?php
                         $args = [
                             'post_parent' => $post->ID,
+							'post_type' => 'page',
                         ];
                         $children = get_children( $args );
 
