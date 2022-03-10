@@ -52,7 +52,7 @@ body {
 .left-nav > li:hover > ul,
 .current-menu-parent,
 .current-menu-item {
-	@apply bg-primary;
+	@apply bg-secondary;
 }
 .left-nav > li:hover > ul {
 	@apply hidden lg:flex flex-col;
@@ -64,7 +64,7 @@ body {
 	@apply flex w-full px-4 py-1;
 }
 .left-nav > li > ul a:hover {
-	@apply bg-secondary;
+	@apply bg-quaternary;
 }
 .left-nav li[class*="aa-"] {
 	@apply hidden;

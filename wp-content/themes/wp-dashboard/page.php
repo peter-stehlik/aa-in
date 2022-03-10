@@ -20,8 +20,8 @@
                             </div>
 
                             <?php if( get_the_post_thumbnail() ): ?>
-                                <div class="flex-1 flex items-center pb-8 lg:py-8">
-                                    <?php the_post_thumbnail("large", ['class' => 'rounded-lg object-cover']) ?>
+                                <div class="flex-1 flex items-center pb-8 lg:py-8 mt-8 lg:mt-0">
+                                    <?php the_post_thumbnail("large", ['class' => 'rounded-lg object-cover max-h-full']) ?>
                                 </div>
                             <?php else: ?>
                                 <div class="svg-wrap flex-1">
@@ -43,18 +43,18 @@
                     if( !empty($children) ): ?>
                         <div class="flex flex-wrap -mx-2 mb-8">
                             <?php foreach( $children as $child ): ?>
-                                <div class="w-full sm:w-1/2 lg:w-1/3 mb-4 px-2 hover:drop-shadow-xl hover:-translate-y-1 transition-transform duration-500">
-                                    <article class="h-full bg-quaternary p-4 rounded-lg text-white">
+                                <div class="w-1/2 lg:w-1/4 mb-4 px-2 hover:drop-shadow-xl hover:-translate-y-1 transition-transform duration-500">
+                                    <article class="h-full bg-secondary p-4 rounded-lg text-white">
                                         <figure>
                                             <a href="<?php echo $child->guid; ?>">
-                                                <span class="flex justify-center" style="padding: 3rem 0;">
+                                                <span class="flex justify-center py-4">
 													<img src="<?php echo get_template_directory_uri(); ?>/assets/img/aardwark-green.svg" width="150" height="120" alt="aardwark">
 												</span>
                                             </a>
                                         </figure>
 
-                                        <div class="pt-4">
-                                            <h2 class="text-xl lg:text-3xl"><a class="hover:underline focus:text-green" href="<?php echo $child->guid; ?>"><?php echo $child->post_title; ?></a></h2>
+                                        <div class="text-center">
+                                            <h2 class="text-xl"><a class="hover:underline focus:text-green" href="<?php echo $child->guid; ?>"><?php echo $child->post_title; ?></a></h2>
                                         </div>
                                     </article>
                                 </div>

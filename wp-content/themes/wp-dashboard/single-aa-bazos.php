@@ -33,8 +33,8 @@
                             </div>
 
                             <?php if( get_the_post_thumbnail() ): ?>
-                                <div class="flex-1 flex items-center pb-8 lg:py-8">
-                                    <?php the_post_thumbnail("large", ['class' => 'rounded-lg object-cover']) ?>
+                                <div class="flex-1 flex items-center pb-8 lg:py-8 mt-8 lg:mt-0">
+                                    <?php the_post_thumbnail("large", ['class' => 'rounded-lg object-cover max-h-full']) ?>
                                 </div>
                             <?php else: ?>
                                 <div class="svg-wrap flex-1">

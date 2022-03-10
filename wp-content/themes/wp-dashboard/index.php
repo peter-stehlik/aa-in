@@ -35,7 +35,7 @@
 									<figure>
 										<a href="<?php the_permalink(); ?>">
 											<?php if( get_the_post_thumbnail() ): ?>
-												<?php the_post_thumbnail("post-thumbnail", ['class' => 'w-full rounded-lg object-cover']) ?>
+												<?php the_post_thumbnail("gallery_2x", ['class' => 'w-full rounded-lg object-cover']) ?>
 											<?php else: ?>
 												<span class="flex justify-center" style="padding: 3rem 0;">
 													<img src="<?php echo get_template_directory_uri(); ?>/assets/img/aardwark-green.svg" width="150" height="120" alt="aardwark">
@@ -65,7 +65,7 @@
 									<figure>
 										<a href="<?php the_permalink(); ?>">
 											<?php if( get_the_post_thumbnail() ): ?>
-												<?php the_post_thumbnail("medium", ['class' => 'rounded-lg object-cover']) ?>
+												<?php the_post_thumbnail("gallery_2x", ['class' => 'rounded-lg object-cover']) ?>
 											<?php else: ?>
 												<span class="flex justify-center" style="padding: 3rem 0;">
 													<img src="<?php echo get_template_directory_uri(); ?>/assets/img/aardwark-green.svg" width="150" height="120" alt="aardwark">
