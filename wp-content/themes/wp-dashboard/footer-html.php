@@ -14,7 +14,7 @@
             </div>
 
             <div class="lg:w-1/2 lg:pl-12">
-                <span class="flex mb-4 lg:mb-10 text-3xl lg:text-5xl">Teambuildingy</span>
+                <span class="flex mb-4 lg:mb-10 text-3xl lg:text-5xl">Akcie</span>
 
                 <div class="flex flex-col lg:flex-row">
                     <div class="flex-1 lg:pr-8 mb-8 lg:mb-0">

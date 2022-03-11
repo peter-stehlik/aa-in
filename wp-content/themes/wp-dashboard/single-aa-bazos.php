@@ -14,7 +14,7 @@
                                 <div class="content flex-1 order-2 lg:order-1 text-white">
                                     <p class="mb-4 lg:mb-8 text-quaternary tracking-wide">Bazoš</p>
 
-                                    <h1 class="mb-4 text-4xl lg:text-6xl"><?php the_title(); ?></h1>
+                                    <h1 class="lg:pr-8 mb-4 text-4xl lg:text-6xl"><?php the_title(); ?></h1>
 
                                     <div class="flex items-center mb-4">
                                         <time class="inline-flex mr-2 text-white" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('d.m.Y'); ?></time>

@@ -13,7 +13,7 @@
                                 <div class="content flex-1 order-2 lg:order-1 text-white">
                                     <p class="mb-4 lg:mb-8 text-quaternary tracking-wide">Aardwark</p>
 
-                                    <h1 class="mb-8 text-4xl lg:text-6xl"><?php the_title(); ?></h1>
+                                    <h1 class="lg:pr-8 mb-8 text-4xl lg:text-6xl"><?php the_title(); ?></h1>
 
                                     <a class="inline-flex justify-center items-center min-w-[250px] px-8 py-4 mt-1 lg:mt-0 rounded-full focus:bg-green font-semibold transition-colors  bg-secondary hover:bg-quaternary text-white " href="#detail">Prečítať viac</a>
                                 </div>
