@@ -4,7 +4,7 @@
 	<div class="flex h-screen">		
         <?php get_sidebar(); ?>
 
-		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
+		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-12">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <div class="bg-primary px-4 lg:px-8 rounded-lg">
                     <div class="container mx-auto">
