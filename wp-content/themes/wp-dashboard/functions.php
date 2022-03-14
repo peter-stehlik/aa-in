@@ -361,15 +361,21 @@ function aa_reserve()
     if( $postId && $email && $title && $permalink ){
         update_field("rezervovane", $email, $postId);
 
-        $to = "ahoj.wappka@gmail.com";
+        $current_user = wp_get_current_user();
+        $email = $current_user->email;
+
+        $to = "hr@aardwark.com";
+        if( $email = "peter@inovative.sk" ){
+            $to = "ahoj.wappka@gmail.com";
+        }
         $subject = "AA Bazos rezervacia";
         $message = "Na bazosi si " . $email . " rezervoval <a href='" . $permalink . "'> " . $title . "</a>.";
 		
 		$headers = '';		
 		$headers .= 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-		$headers .= 'From: Aardwark Bazos <board@aardwark.com>' . "\r\n";
-		$headers .= 'Reply-To: Aardwark <board@aardwark.com>' . "\r\n";
+		$headers .= 'From: Aardwark Bazar <hr@aardwark.com>' . "\r\n";
+		$headers .= 'Reply-To: Aardwark <hr@aardwark.com>' . "\r\n";
 
         mail( $to, $subject, $message, $headers );
     } else {
@@ -388,12 +394,18 @@ function notify_users($post_id, $post, $update){
 
     if( $notifier == "yes" ){
         $sent_date = get_field("rozposlane_dna", $post_id);
+        $chosen_roles = get_field("user_roles", $post_id);
         
         if( !empty($sent_date) ){
             $users = get_users();
 
             foreach ( $users as $user ) {
                 $to = $user->user_email;
+                $roles = ( array ) $user->roles;
+
+                if( count(array_intersect($chosen_roles, $roles)) == 0 ){
+                    break;
+                }
                 
                 // $to = "ahoj.wappka@gmail.com";
                 
@@ -405,8 +417,8 @@ function notify_users($post_id, $post, $update){
                 $headers = '';		
                 $headers .= 'MIME-Version: 1.0' . "\r\n";
                 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-                $headers .= 'From: Aardwark Intranet <board@aardwark.com>' . "\r\n";
-                $headers .= 'Reply-To: Aardwark Intranet <board@aardwark.com>' . "\r\n";
+                $headers .= 'From: Aardwark Intranet <hr@aardwark.com>' . "\r\n";
+                $headers .= 'Reply-To: Aardwark Intranet <hr@aardwark.com>' . "\r\n";
                     
                 mail( $to, $subject, $message, $headers );
             }

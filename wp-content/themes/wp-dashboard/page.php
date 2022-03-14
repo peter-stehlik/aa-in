@@ -23,6 +23,35 @@
                                 <div class="flex-1 flex items-center pb-8 lg:py-8 mt-8 lg:mt-0">
                                     <?php the_post_thumbnail("large", ['class' => 'rounded-lg object-cover max-h-full']) ?>
                                 </div>
+                            <?php elseif( get_field("animacia") ): ?>
+                                <div class="svg-wrap flex-1 pb-8 pt-4">
+                                    <?php
+                                        switch( get_field("animacia") ) {
+                                            case "bpm":
+                                                $animation = "bpm";
+                                                break;
+                                            case "devops":
+                                                $animation = "devops";
+                                                break;
+                                            case "kariera":
+                                                $animation = "kariera";
+                                                break;
+                                            case "onas":
+                                                $animation = "onas";
+                                                break;
+                                            case "vyvoj":
+                                                $animation = "vyvoj";
+                                                break;
+                                            case "outsourcing":
+                                                $animation = "outsourcing";
+                                                break;
+                                            default:
+                                                $animation = "green-aardwark";
+                                        }
+
+                                        echo get_template_part("template-parts/svg/content", "animation-" . $animation . "");
+                                    ?>
+                                </div>
                             <?php else: ?>
                                 <div class="svg-wrap flex-1">
                                     <?php echo get_template_part("template-parts/svg/content", "animation-green-aardwark"); ?>
@@ -65,6 +94,15 @@
                     <div class="prose prose-p:text-lg prose-headings:text-primary prose-headings:font-normal prose-h2:text-3xl prose-a:text-secondary hover:prose-a:no-underline max-w-2xl"> 
                         <?php the_content(); ?>
                     </div>
+
+                    <?php
+                        $parent = $post->post_parent;
+                        if($parent):
+                    ?>
+                        <div class="mt-20">
+                            <a class="btn px-8 py-4 border-2 border-primary rounded-full bg-white hover:bg-quaternary text-primary font-semibold tracking-wide no-underline" href="<?php echo get_permalink($parent); ?>">späť na <?php echo get_the_title($parent); ?></a>
+                        </div>
+                    <?php endif; ?>
                 </div>
             <?php endwhile; else : ?>
                 <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
