@@ -56,8 +56,6 @@ let AA = {
 
 				document.querySelector(".js-mob-sub-nav").innerHTML = $subNav;
 
-				console.log( $subNav );
-
 				AA.$subMenu.classList.add("is-opened");
 			});
 		};

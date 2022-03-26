@@ -9,15 +9,6 @@ body {
 body {
 	background-color: #f5f5f5;
 }
-/*@screen xl {
-	body {
-		background-image: url('../img/aardwark-pink.svg');
-		background-repeat: no-repeat;
-		background-position: bottom 0 right -130px;
-		background-size: 300px 200px;
-		background-attachment: fixed;
-	}
-}*/
 .svg-wrap svg {
 	@apply lg:h-full;
 }
@@ -52,7 +43,7 @@ body {
 .left-nav > li:hover > ul,
 .current-menu-parent,
 .current-menu-item {
-	@apply bg-secondary;
+	@apply bg-quaternary;
 }
 .left-nav > li:hover > ul {
 	@apply hidden lg:flex flex-col;
@@ -64,7 +55,7 @@ body {
 	@apply flex w-full px-4 py-1;
 }
 .left-nav > li > ul a:hover {
-	@apply bg-quaternary;
+	@apply bg-secondary;
 }
 .left-nav li[class*="aa-"] {
 	@apply hidden;
@@ -105,18 +96,6 @@ body.administrator .left-nav li {
 .sub-nav-wrap.is-opened {
 	transform: translateX(-50%);
 }
-.aside-aardwark {
-	animation: slidein .4s cubic-bezier(0.215, 0.610, 0.355, 1) .2s forwards;
-}
-@keyframes slidein {
-	from {
-	  transform: translateX(0%);
-	}
-  
-	to {
-	  transform: translateX(200px);
-	}
-  }
 .fnav {
 	@apply mb-8;
 }
@@ -196,6 +175,34 @@ body.administrator .left-nav li {
 	font-size: 1.5rem !important;
 	line-height: 1.25 !important;
 	@apply pb-4;
+}
+.wp-block-quote {
+	background-image: url(../img/aardwark-pink.svg);
+	background-size: 100px 100px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	margin-top: 3rem !important;
+	margin-bottom: 4rem !important;
+	border: 0 !important;
+	font-style: normal !important;
+	@apply pt-24 text-center;
+}
+.wp-block-quote p {
+	@apply m-0 mb-4 text-primary text-2xl;
+}
+.wp-block-quote cite {
+	font-style: normal !important;
+	@apply text-lg;
+}
+.wp-block-ub-content-toggle-accordion-title-wrap {
+	@apply px-4 py-3 border border-gray-200 rounded-lg bg-white hover:bg-quaternary hover:bg-opacity-10;
+}
+.wp-block-ub-content-toggle-accordion-title {
+	padding: 0 !important;
+	@apply text-lg font-semibold;
+}
+.wp-block-ub-content-toggle-accordion {
+	@apply border-0;
 }
 
 /*
