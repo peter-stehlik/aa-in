@@ -7,7 +7,7 @@
 <?php get_header('head'); ?>
     <?php get_header('html'); ?>
 
-	<div class="flex h-screen">		
+	<div class="flex">		
         <?php get_sidebar(); ?>
 
 		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-12">
@@ -102,9 +102,9 @@
 				</div>
 			</div>
 
-            <?php get_footer("html"); ?> 
 		</main>
 	</div>
-
+    
+    <?php get_footer("html"); ?> 
 
 <?php get_footer("foot"); ?>

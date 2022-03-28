@@ -1,13 +1,13 @@
-<aside class="nav-wrap fixed left-0 top-12 z-10 lg:flex flex-col w-full lg:w-60 lg:pt-10 h-screen bg-black text-white">
+<aside class="nav-wrap fixed left-0 top-12 z-10 lg:flex flex-col w-full lg:w-60 lg:pt-10 h-screen bg-neutral-100 text-primary">
     <div class="sub-nav-wrap w-[200%] flex lg:w-full">
         <div class="flex-1">
-            <?php if( !is_home() ): ?>
-                <div class="mt-5 mb-2 mx-4">
-                    <?php get_search_form(); ?>
-                </div>
-            <?php endif; ?>
-
-            <p class="hidden lg:block pb-1 mx-4 border-b border-gray-300 border-dotted font-bold tracking-wide text-sm text-gray-300 uppercase">Menu:</p>
+            <div class="mb-8 h-[46px]">
+                <?php if( !is_home() ): ?>
+                    <div class="mx-4">
+                        <?php get_search_form(); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
 
             <?php
                 wp_nav_menu(

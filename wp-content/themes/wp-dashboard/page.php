@@ -1,67 +1,24 @@
 <?php get_header('head'); ?>
     <?php get_header('html'); ?>
 
-	<div class="flex h-screen">		
+	<div class="flex">		
         <?php get_sidebar(); ?>
 
 		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-12">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <div class="bg-primary px-4 lg:px-8 rounded-lg">
-                    <div class="container mx-auto">
-                        <div class="flex flex-col lg:flex-row lg:h-[380px]">
-                            <div class="flex-1 flex flex-col justify-center pt-10 lg:py-20">
-                                <div class="content flex-1 order-2 lg:order-1 text-white">
-                                    <p class="mb-4 lg:mb-8 text-quaternary tracking-wide">Aardwark</p>
-
-                                    <h1 class="lg:pr-8 mb-8 text-4xl lg:text-6xl"><?php the_title(); ?></h1>
-
-                                    <a class="inline-flex justify-center items-center min-w-[250px] px-8 py-4 mt-1 lg:mt-0 rounded-full focus:bg-green font-semibold transition-colors  bg-secondary hover:bg-quaternary text-white " href="#detail">Prečítať viac</a>
-                                </div>
-                            </div>
-
-                            <?php if( get_the_post_thumbnail() ): ?>
-                                <div class="flex-1 flex items-center pb-8 lg:py-8 mt-8 lg:mt-0">
-                                    <?php the_post_thumbnail("large", ['class' => 'rounded-lg object-cover max-h-full']) ?>
-                                </div>
-                            <?php elseif( get_field("animacia") ): ?>
-                                <div class="svg-wrap flex-1 pb-8 pt-4">
-                                    <?php
-                                        switch( get_field("animacia") ) {
-                                            case "bpm":
-                                                $animation = "bpm";
-                                                break;
-                                            case "devops":
-                                                $animation = "devops";
-                                                break;
-                                            case "kariera":
-                                                $animation = "kariera";
-                                                break;
-                                            case "onas":
-                                                $animation = "onas";
-                                                break;
-                                            case "vyvoj":
-                                                $animation = "vyvoj";
-                                                break;
-                                            case "outsourcing":
-                                                $animation = "outsourcing";
-                                                break;
-                                            default:
-                                                $animation = "green-aardwark";
-                                        }
-
-                                        echo get_template_part("template-parts/svg/content", "animation-" . $animation . "");
-                                    ?>
-                                </div>
-                            <?php else: ?>
-                                <div class="svg-wrap flex-1">
-                                    <?php echo get_template_part("template-parts/svg/content", "animation-green-aardwark"); ?>
-                                </div>
-                            <?php endif; ?>
+                <div class="container border-neutral-500 border-b border-dotted mb-8 lg:mb-16">
+                    <div class="flex flex-col lg:flex-row lg:items-center">
+                        <div class="px-8 mb-4 lg:mb-0">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Ikona.svg" alt="<?php the_title(); ?>">
+                        </div>
+                        
+                        <div class="mb-8 lg:mb-0">
+                            <h1 class="py-2 text-4xl lg:text-6xl text-primary"><?php the_title(); ?></h1>
                         </div>
                     </div>
                 </div>
 
-                <div class="container flex flex-col mx-auto pt-20 lg:pl-8 2xl:pl-0" id="detail">
+                <div class="container flex flex-col pt-20 lg:pl-8 2xl:pl-0" id="detail">
                     <?php
                     $args = [
                         'post_parent' => $post->ID,
@@ -72,21 +29,15 @@
                     if( !empty($children) ): ?>
                         <div class="flex flex-wrap -mx-2 mb-8">
                             <?php foreach( $children as $child ): ?>
-                                <div class="w-1/2 lg:w-1/4 mb-4 px-2 hover:drop-shadow-xl hover:-translate-y-1 transition-transform duration-500">
-                                    <article class="h-full bg-secondary p-4 rounded-lg text-white">
-                                        <figure>
-                                            <a href="<?php echo $child->guid; ?>">
-                                                <span class="flex justify-center py-4">
-													<img src="<?php echo get_template_directory_uri(); ?>/assets/img/aardwark-green.svg" width="150" height="120" alt="aardwark">
-												</span>
-                                            </a>
-                                        </figure>
+                                <section class="sm:w-1/2 lg:w-1/4 px-4 mb-8">
+                                    <a class="flex justify-between hover:text-primary" href="<?php echo $child->guid; ?>">
+                                        <span class="pr-4 text-xl"><?php echo $child->post_title; ?></span>
 
-                                        <div class="text-center">
-                                            <h2 class="text-xl"><a class="hover:underline focus:text-green" href="<?php echo $child->guid; ?>"><?php echo $child->post_title; ?></a></h2>
-                                        </div>
-                                    </article>
-                                </div>
+                                        <span class="flex items-center justify-center w-8 min-w-[2rem] h-8 border border-gray-200 rounded-full">
+                                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/img/Arrow.svg" alt="<?php echo $child->post_title; ?>">
+                                        </span>
+                                    </a>
+                                </section>
                             <?php endforeach; ?>
                         </div>
                     <?php endif; ?>
@@ -108,9 +59,9 @@
                 <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
             <?php endif; ?>
             
-            <?php get_footer("html"); ?>
 		</main>
 	</div>
-
+    
+    <?php get_footer("html"); ?>
 
 <?php get_footer("foot"); ?>

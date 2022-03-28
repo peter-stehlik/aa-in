@@ -1,7 +1,7 @@
 <?php get_header('head'); ?>
     <?php get_header('html'); ?>
 
-	<div class="flex h-screen">		
+	<div class="flex">		
         <?php get_sidebar(); ?>
 
 		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-12">
@@ -97,10 +97,10 @@
                 <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
             <?php endif; ?>
 
-            <?php get_footer("html"); ?>
 		</main>
 	</div>
-
+    
+    <?php get_footer("html"); ?>
 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/separate/glidejs/css/glide.core.min.css">
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/separate/glidejs/js/glide.min.js"></script>
