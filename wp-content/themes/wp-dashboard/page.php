@@ -4,7 +4,7 @@
 	<div class="flex">		
         <?php get_sidebar(); ?>
 
-		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-12">
+		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <div class="container border-neutral-500 border-b border-dotted mb-8 lg:mb-16">
                     <div class="flex flex-col lg:flex-row lg:items-center">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
 
-                <div class="container flex flex-col pt-20 lg:pl-8 2xl:pl-0" id="detail">
+                <div class="container flex flex-col lg:pl-8 2xl:pl-0" id="detail">
                     <?php
                     $args = [
                         'post_parent' => $post->ID,
