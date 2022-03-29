@@ -13,7 +13,15 @@
                         </div>
                         
                         <div class="mb-8 lg:mb-0">
-                            <h1 class="py-2 text-4xl lg:text-6xl text-primary"><?php the_title(); ?></h1>
+                            <h1 class="py-2 text-4xl lg:text-6xl text-primary">
+                                <?php
+                                    if( get_field("nadpis") ):
+                                        the_field("nadpis");
+                                    else:
+                                        the_title();
+                                    endif;
+                                ?>
+                            </h1>
                         </div>
                     </div>
                 </div>
