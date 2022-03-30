@@ -4,7 +4,7 @@
 	<div class="flex">		
         <?php get_sidebar(); ?>
 
-		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
+		<main class="flex-1 lg:ml-60 px-4 lg:px-16 pt-20">
 			<?php
 				$archiveTitle = get_the_archive_title();
 				$archiveTitleArr = explode(":", $archiveTitle);

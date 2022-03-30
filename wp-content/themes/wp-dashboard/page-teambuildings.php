@@ -10,15 +10,13 @@
 	<div class="flex">		
         <?php get_sidebar(); ?>
 
-		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
+		<main class="flex-1 lg:ml-60 px-4 lg:px-16 pt-20">
             <div class="container border-neutral-500 border-b border-dotted mb-8 lg:mb-16">
                 <div class="flex flex-col lg:flex-row lg:items-center">
-                    <div class="px-8 mb-4 lg:mb-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Ikona.svg" alt="<?php the_title(); ?>">
-                    </div>
+                    <?php echo get_template_part("template-parts/content", "ilustration-img"); ?>
                     
-                    <div class="mb-8 lg:mb-0">
-                        <h1 class="text-4xl lg:text-6xl text-primary"><?php the_title(); ?></h1>
+                    <div class="ml-8 mb-8 lg:mb-0">
+                        <h1 class="py-2 text-4xl lg:text-6xl text-primary"><?php the_title(); ?></h1>
                     </div>
                 </div>
             </div>
