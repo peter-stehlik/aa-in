@@ -56,6 +56,12 @@
 
                     <div class="prose prose-p:text-lg prose-headings:text-primary prose-headings:font-normal prose-h2:text-3xl prose-a:text-secondary hover:prose-a:no-underline max-w-2xl"> 
                         <?php the_content(); ?>
+
+                        <?php
+                            echo get_template_part("template-parts/content", "gallery", [
+                                "post_id" => $post->ID
+                            ]);
+                        ?>
                     </div>
 
                     <?php
