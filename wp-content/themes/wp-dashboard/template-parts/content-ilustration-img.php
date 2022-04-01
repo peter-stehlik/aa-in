@@ -21,6 +21,10 @@
             echo "</div>";
         }
 
+        if( is_archive() ){
+            echo get_template_part("template-parts/svg/content", "animation-bazar");
+        }
+
     endif;
 ?>
 

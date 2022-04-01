@@ -4,7 +4,7 @@
 	<div class="flex">		
         <?php get_sidebar(); ?>
 
-		<main class="flex-1 lg:ml-60 px-4 lg:px-16 pt-20">
+		<main class="flex-1 min-h-[50vh] lg:ml-60 px-4 lg:px-16 pt-20">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <div class="container border-neutral-500 border-b border-dotted mb-8 lg:mb-16">
                     <div class="flex flex-col lg:flex-row lg:items-center">

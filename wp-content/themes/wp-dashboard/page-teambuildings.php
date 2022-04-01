@@ -10,7 +10,7 @@
 	<div class="flex">		
         <?php get_sidebar(); ?>
 
-		<main class="flex-1 lg:ml-60 px-4 lg:px-16 pt-20">
+		<main class="flex-1 min-h-[50vh] lg:ml-60 px-4 lg:px-16 pt-20">
             <div class="container border-neutral-500 border-b border-dotted mb-8 lg:mb-16">
                 <div class="flex flex-col lg:flex-row lg:items-center">
                     <?php echo get_template_part("template-parts/content", "ilustration-img"); ?>

@@ -14,11 +14,11 @@
 
 			<div class="container border-neutral-500 border-b border-dotted mb-8 lg:mb-16">
 				<div class="flex flex-col lg:flex-row lg:items-center">
-					<div class="px-8 mb-4 lg:mb-0">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/Ikona.svg" alt="<?php echo $archiveTitle; ?>">
+					<div class="pl-8 mb-4 lg:mb-0">
+						<?php echo get_template_part("template-parts/content", "ilustration-img"); ?>
 					</div>
 					
-					<div class="mb-8 lg:mb-0">
+					<div class="ml-8 mb-8 lg:mb-0">
 						<h1 class="py-2 text-4xl lg:text-6xl text-primary"><?php echo $archiveTitle; ?></h1>
 					</div>
 				</div>

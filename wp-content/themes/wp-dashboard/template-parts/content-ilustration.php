@@ -32,4 +32,7 @@ switch( get_field("ilustration", $post_id) ){
     case "teambuildingy":
         echo get_template_part("template-parts/svg/content", "animation-teambuildingy");
         break;
+    case "o-nas":
+        echo get_template_part("template-parts/svg/content", "animation-o-nas");
+        break;
 }
