@@ -37,13 +37,13 @@ body {
 	@apply relative flex justify-between;
 }
 .left-nav > li > a {
-	@apply flex justify-start px-4 py-1 tracking-wide font-semibold;
+	@apply flex justify-start px-4 py-2 tracking-wide font-semibold;
 }
 .left-nav > li:hover,
 .left-nav > li:hover > ul,
 .current-menu-parent,
 .current-menu-item {
-	@apply bg-quaternary;
+	@apply bg-green;
 }
 .left-nav > li:hover > ul {
 	@apply hidden lg:flex flex-col;
@@ -52,10 +52,10 @@ body {
 	@apply absolute left-full top-0 w-60 lg:drop-shadow-2xl hidden;
 }
 .left-nav > li > ul a {
-	@apply flex w-full px-4 py-1;
+	@apply flex w-full px-4 py-2;
 }
 .left-nav > li > ul a:hover {
-	@apply bg-secondary;
+	@apply text-white;
 }
 .left-nav li[class*="aa-"] {
 	@apply hidden;
@@ -87,7 +87,7 @@ body.administrator .left-nav li {
 	} */
 	.menu-item-has-children:after {
 		content:"+";
-		@apply relative top-1 pr-4 font-bold;
+		@apply relative top-2 pr-4 font-bold;
 	}
 }
 .sub-nav-wrap {
