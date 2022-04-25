@@ -49,7 +49,7 @@
     new Glide('.glide', {
         type: 'carousel',
         startAt: 0,
-        perView: 2,
+        perView: 4,
         breakpoints: {
             600: {
                 perView: 1,

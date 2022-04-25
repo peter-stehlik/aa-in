@@ -10,7 +10,7 @@
 	<div class="flex">		
         <?php get_sidebar(); ?>
 
-		<main class="flex-1 min-h-[50vh] lg:ml-60 px-4 lg:px-16 pt-20">
+		<main class="relative flex-1 min-h-[85vh] lg:ml-60 px-4 lg:px-16 pt-20">
             <div class="container border-neutral-500 border-b border-dotted mb-8 lg:mb-16">
                 <div class="flex flex-col lg:flex-row lg:items-center">
                     <?php echo get_template_part("template-parts/content", "ilustration-img"); ?>
@@ -37,9 +37,11 @@
                     if ( $the_query->have_posts() ) :
                         while ( $the_query->have_posts() ) : $the_query->the_post();
                             $action = [
+                                "month" => get_the_time("F"),
                                 "year" => get_the_time("Y"),
                                 "title" => get_the_title(),
                                 "permalink" => get_the_permalink(),
+                                "thumbnail" => get_the_post_thumbnail_url($post, 'medium'),
                             ];
 
                             array_push($actions, $action);
@@ -57,41 +59,29 @@
 						<div class="absolute left-0 bottom-0 w-px h-20 bg-gradient-to-t from-gray-100 to-gray-300"></div>
 					</div>
 
-                    <?php
-                        $current = 0;
-                        $i = 0;
-                        $lastKey = array_key_last($actions);
-                    ?>
                     <?php foreach( $actions as $key => $item ): ?>
-                        <?php if( $current != $item["year"] ): ?>
-                            <?php if( $key != 0 ): ?>
-                                </ul>
-
-                                <span class="absolute top-1/2 -right-8 <?php if($i % 2 == 0): ?> md:-right-10 <?php else: ?> md:-left-10 <?php endif; ?> w-4 h-4 rounded-full border-2 border-gray-100 md:-translate-y-2 md:-translate-x-px bg-quaternary"></span>
-                            </section>
+                        <section class="relative w-11/12 md:max-w-xs rounded-lg mt-8 <?php if($key % 2 != 0): ?> md:ml-96 <?php endif; ?> shadow-lg bg-white text-right md:text-left">
+                            <?php if( !empty($item["thumbnail"]) ): ?>
+                                <a href="<?php echo $item["permalink"]; ?>">
+                                    <img class="max-h-56 rounded-lg rounded-b-none object-cover" src="<?php echo $item["thumbnail"]; ?>" alt="<?php echo $item["title"]; ?>" width="320" height="214">
+                                </a>
                             <?php endif; ?>
-                            
-                            <section class="relative w-11/12 md:max-w-xs p-4 border border-gray-300 rounded-lg mt-8 <?php if($i % 2 == 0): ?> md:ml-96 <?php endif; ?> shadow-lg bg-white text-right md:text-left">
-                                <h2 class="mb-2 font-bold text-xl text-primary"><?php echo $item["year"]; ?></h2>
 
-                                <ul class="ml-4 list-disc">
-                            <?php $i++; ?>
-                        <?php endif; ?>
+                            <div class="p-4">
+                                <h2 class="font-bold text-xl text-primary">
+                                    <a href="<?php echo $item["permalink"]; ?>"><?php echo $item["title"]; ?></a>
+                                </h2>
 
-                        <li class="mb-1"><a class="border-b hover:border-0 border-black" href="<?php echo $item["permalink"]; ?>"><?php echo $item["title"]; ?></a></li>
+                                <a class="text-sm text-gray-500" href="<?php echo $item["permalink"]; ?>"><?php echo $item["month"]; ?> <?php echo $item["year"]; ?></a>
+                            </div>
 
-                        <?php if( $key == $lastKey ): ?>
-                                </ul>
-
-                                <span class="absolute top-1/2 -right-8 <?php if($i % 2 == 0): ?> md:-right-10 <?php else: ?> md:-left-10 <?php endif; ?> w-4 h-4 rounded-full border-2 border-gray-100 md:-translate-y-2 md:-translate-x-px bg-quaternary"></span>
-                            </section>
-                        <?php endif; ?>
-
-                        <?php $current = $item["year"]; ?>
+                            <span class="absolute top-1/2 -right-8 <?php if($key % 2 == 0): ?> md:-right-10 <?php else: ?> md:-left-10 <?php endif; ?> w-4 h-4 rounded-full border-2 border-gray-100 md:-translate-y-2 md:-translate-x-px bg-quaternary"></span>
+                        </section>
                     <?php endforeach; ?>
 				</div>
 			</div>
 
+            <?php get_footer("html"); ?>
 		</main>
 	</div>
     

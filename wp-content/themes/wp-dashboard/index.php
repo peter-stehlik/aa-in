@@ -4,7 +4,7 @@
 	<div class="flex">		
         <?php get_sidebar(); ?>
 
-		<main class="flex-1 min-h-[50vh] lg:ml-60 px-4 lg:px-16 pt-20">
+		<main class="relative flex-1 min-h-[85vh] lg:ml-60 px-4 lg:px-16 pt-20">
 			<div class="mb-8">
 				<div class="container">
 					<div class="flex flex-col lg:flex-row">
@@ -68,10 +68,10 @@
 					<?php endif; ?>
 				</div>
 			</div>
+
+			<?php get_footer("html"); ?>
 		</main>
 	</div>
-	
-	<?php get_footer("html"); ?>
 
 
 <?php get_footer("foot"); ?>

@@ -4,7 +4,7 @@
 	<div class="flex">		
         <?php get_sidebar(); ?>
 
-		<main class="flex-1 min-h-[50vh] lg:ml-60 px-4 lg:px-16 pt-20">
+		<main class="relative flex-1 min-h-[85vh] lg:ml-60 px-4 lg:px-16 pt-20">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <div class="container border-neutral-500 border-b border-dotted mb-8 lg:mb-16">
                     <div class="flex flex-col lg:flex-row lg:items-center">
@@ -33,7 +33,7 @@
                     $children = get_children( $args );
 
                     if( !empty($children) ): ?>
-                        <div class="flex flex-wrap -mx-2 mb-8">
+                        <div class="flex flex-wrap -mx-2 mb-8 lg:mb-96">
                             <?php foreach( $children as $child ): ?>
                                 <section class="sm:w-1/2 lg:w-1/4 px-4 mb-8">
                                     <a class="flex justify-between hover:text-primary" href="<?php echo $child->guid; ?>">
@@ -76,7 +76,8 @@
             <?php endwhile; else : ?>
                 <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
             <?php endif; ?>
-            
+
+            <?php get_footer("html"); ?>            
 		</main>
 	</div>
     

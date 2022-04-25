@@ -60,10 +60,11 @@ body {
 .left-nav li[class*="aa-"] {
 	@apply hidden;
 }
-body.aa-tpp .left-nav li.aa-tpp,
-body.aa-sro .left-nav li.aa-sro,
-body.aa-student .left-nav li.aa-student,
-body.aa-zl .left-nav li.aa-zl {
+body.tpp-1 .left-nav li.tpp-1,
+body.dpt-7 .left-nav li.dpt-7,
+body.ico-23 .left-nav li.ico-23,
+body.ico-6 .left-nav li.ico-6,
+body.studenti-4 .left-nav li.studenti-4 {
 	@apply block;
 }
 body.administrator .left-nav li {
