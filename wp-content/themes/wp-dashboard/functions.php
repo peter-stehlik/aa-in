@@ -121,7 +121,7 @@ add_action('widgets_init', 'page_widgets_init');
 
 function add_theme_scripts()
 {
-    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=2.3');
+    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=2.5');
 	// wp_enqueue_style('theme-styles', get_stylesheet_uri() . '?v=3.4');
 	
 	wp_enqueue_script('aardwark', get_template_directory_uri().'/assets/js/custom.min.js', array(), 1.3, true);
@@ -267,6 +267,7 @@ function custom_dashboard_widget() {
     <p>Ak z nejakého dôvodu chcete notifikáciu poslať opakovane, vymažte políčko 'Rozposlané dňa'. Emaily sa rozposielajú iba v tom prípade, ak je prázdne.</p>
     <strong>Ako sú zoradené akcie v teambuildingoch?</strong><p>Akcie sú zoradené podľa dátumu. Ten viete meniť na detaile, v pravom stĺpci hore ako dátum 'Publikované dňa'.</p>
     <strong>Ako zamknúť podstránku len pre konkrétnu skupinu používateľov?</strong><p>V administrácii každého príspevku máte na spodu možnosť zvoliť 'Restrict this content'. Zvoľte 'Members with a certain role', kde zaškrtnite kto môže príspevok vidieť. Odporúčame vždy zaškrtávať aj 'Administrátor'.</p>
+    <strong>Ako nastaviť v menu, ktoré položky sa majú zobraziť pre ktorú používateľskú rolu?</strong><p>Cez Vzhľad - Menu môžete upraviť tzv. CSS triedy (pod Navigačný štítok). Ak to tam nie je zobrazené, vpravo hore možno rozbaliť Možnosti zobrazenia a zaškrtnite CSS triedy. Potom tam pridajte kód použivateľskej roly, napr. TPP 1 = tpp-1, študenti 4 = studenti-4, IČO 23 = ico-23.</p>
 	<strong>Ako zobrazím stránku z administrácie?</strong><p>Vľavo úplne hore je ikonka domčeka a www adresa stránky. Po nadídení myšou sa vám ukáže ponuka 'Navštíviť stránku'. Otvárajte vždy na novej karte, pretože po jednoduchom kliknutí sa odhlásite z administrácie.</p>
 	<strong>Ako upravim stránku?</strong><p>Z ľavého menu vyberte 'Stránky'.</p>
 	<strong>Ako zmením heslo?</strong><p>Cez položku 'Profil'.</p>

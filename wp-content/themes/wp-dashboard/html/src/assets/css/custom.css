@@ -57,9 +57,22 @@ body {
 .left-nav > li > ul a:hover {
 	@apply text-white;
 }
-.left-nav li[class*="aa-"] {
+.left-nav > li.aa-zl,
+.left-nav li.aa-zl,
+.left-nav > li.tpp-1,
+.left-nav li.tpp-1,
+.left-nav > li.dpt-7,
+.left-nav li.dpt-7,
+.left-nav > li.ico-23,
+.left-nav li.ico-23,
+.left-nav > li.ico-6,
+.left-nav li.ico-6,
+.left-nav > li.studenti-4,
+.left-nav li.studenti-4
+{
 	@apply hidden;
 }
+body.aa-zl .left-nav li.aa-zl,
 body.tpp-1 .left-nav li.tpp-1,
 body.dpt-7 .left-nav li.dpt-7,
 body.ico-23 .left-nav li.ico-23,
