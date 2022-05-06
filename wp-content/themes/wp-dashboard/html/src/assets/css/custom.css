@@ -51,6 +51,9 @@ body {
 .left-nav > li > ul {
 	@apply absolute left-full top-0 w-60 lg:drop-shadow-2xl hidden;
 }
+.left-nav > li.align-middle > ul {
+	top: -160px;
+}
 .left-nav > li > ul a {
 	@apply flex w-full px-4 py-2;
 }
