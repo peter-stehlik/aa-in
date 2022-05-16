@@ -121,7 +121,7 @@ add_action('widgets_init', 'page_widgets_init');
 
 function add_theme_scripts()
 {
-    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=3.8');
+    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=3.9');
 	// wp_enqueue_style('theme-styles', get_stylesheet_uri() . '?v=3.4');
 	
 	wp_enqueue_script('aardwark', get_template_directory_uri().'/assets/js/custom.min.js', array(), 1.3, true);
@@ -366,9 +366,9 @@ function aa_reserve()
         $email = $current_user->email;
 
         $to = "hr@aardwark.com";
-        if( $email = "peter@inovative.sk" ){
+        /*if( $email = "peter@inovative.sk" ){
             $to = "ahoj.wappka@gmail.com";
-        }
+        }*/
         $subject = "AA Bazos rezervacia";
         $message = "Na bazosi si " . $email . " rezervoval <a href='" . $permalink . "'> " . $title . "</a>.";
 		

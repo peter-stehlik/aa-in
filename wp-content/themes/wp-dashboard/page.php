@@ -36,7 +36,7 @@
                         <div class="flex flex-wrap -mx-2 mb-8 lg:mb-96">
                             <?php foreach( $children as $child ): ?>
                                 <section class="sm:w-1/2 lg:w-1/4 px-4 mb-8">
-                                    <a class="flex justify-center p-4 bg-white rounded-lg hover:bg-green hover:text-white" href="<?php echo $child->guid; ?>">
+                                    <a class="flex justify-center p-4 bg-white rounded-lg text-center hover:bg-green hover:text-white" href="<?php echo $child->guid; ?>">
                                         <span class="text-xl"><?php echo $child->post_title; ?></span>
                                     </a>
                                 </section>

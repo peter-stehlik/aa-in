@@ -49,13 +49,16 @@ body {
 	@apply hidden lg:flex flex-col;
 }
 .left-nav > li > ul {
-	@apply absolute left-full top-0 w-60 lg:drop-shadow-2xl hidden;
+	@apply absolute left-full top-0 w-60 lg:drop-shadow-2xl hidden py-2;
 }
 .left-nav > li.align-middle > ul {
 	top: -160px;
 }
+.administrator .left-nav > li.align-middle > ul {
+	top: -320px;
+}
 .left-nav > li > ul a {
-	@apply flex w-full px-4 py-2;
+	@apply flex w-full px-4 py-1;
 }
 .left-nav > li > ul a:hover {
 	@apply text-white;

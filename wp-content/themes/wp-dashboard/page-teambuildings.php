@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div class="container flex flex-col mx-auto" id="detail">
+            <div class="container flex flex-col" id="detail">
 				<h1 class="md:max-w-[704px] pr-8 md:pr-0 md:mt-5 md:mb-8 text-right md:text-left text-primary text-3xl lg:text-6xl"></h1>
 
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
