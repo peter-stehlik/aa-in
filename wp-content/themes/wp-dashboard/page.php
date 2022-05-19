@@ -36,8 +36,8 @@
                         <div class="flex flex-wrap -mx-2 mb-8 lg:mb-96">
                             <?php foreach( $children as $child ): ?>
                                 <section class="sm:w-1/2 lg:w-1/4 px-4 mb-8">
-                                    <a class="flex justify-center p-4 bg-white rounded-lg text-center hover:bg-green hover:text-white" href="<?php echo $child->guid; ?>">
-                                        <span class="text-xl"><?php echo $child->post_title; ?></span>
+                                    <a class="flex items-center justify-center h-full min-h-[100px] px-4 py-2 bg-white rounded-lg hover:bg-green hover:text-white text-center" href="<?php echo $child->guid; ?>">
+                                        <span class="text-lg"><?php echo $child->post_title; ?></span>
                                     </a>
                                 </section>
                             <?php endforeach; ?>
@@ -65,12 +65,12 @@
                         if($parent):
                     ?>
                         <div class="mt-20">
-                            <a class="btn px-8 py-4 border-2 border-primary rounded-full bg-white hover:bg-quaternary text-primary font-semibold tracking-wide no-underline" href="<?php echo get_permalink($parent); ?>">späť na <?php echo get_the_title($parent); ?></a>
+                            <a class="btn px-8 py-4 border-2 border-primary rounded-full bg-white hover:bg-quaternary text-primary font-semibold tracking-wide no-underline" href="<?php echo get_permalink($parent); ?>"><?php _e("späť na", "intranetaa"); ?> <?php echo get_the_title($parent); ?></a>
                         </div>
                     <?php endif; ?>
                 </div>
             <?php endwhile; else : ?>
-                <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                <p><?php esc_html_e( 'Prepáčte, nenašli sme žiadne príspevky.', 'intranetaa' ); ?></p>
             <?php endif; ?>
 
             <?php get_footer("html"); ?>            

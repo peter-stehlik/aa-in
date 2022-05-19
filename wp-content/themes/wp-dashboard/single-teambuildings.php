@@ -34,11 +34,11 @@
                     </div>
 
                     <div class="mt-20">
-                        <a class="btn px-8 py-4 border-2 border-primary rounded-full bg-white hover:bg-quaternary text-primary font-semibold tracking-wide no-underline" href="<?php echo home_url('teambuildingy'); ?>">späť na Teambuildingy</a>
+                        <a class="btn px-8 py-4 border-2 border-primary rounded-full bg-white hover:bg-quaternary text-primary font-semibold tracking-wide no-underline" href="<?php echo home_url('teambuildingy'); ?>"><?php _e("späť na Teambuildingy", "intranetaa"); ?></a>
                     </div>
                 </div>
             <?php endwhile; else : ?>
-                <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                <p><?php esc_html_e( 'Prepáčte, nenašli sme žiadne príspevky.', 'intranetaa' ); ?></p>
             <?php endif; ?>
 
             <?php get_footer("html"); ?>

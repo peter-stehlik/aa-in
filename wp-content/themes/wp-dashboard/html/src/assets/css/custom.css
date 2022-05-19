@@ -74,10 +74,13 @@ body {
 .left-nav > li.ico-6,
 .left-nav li.ico-6,
 .left-nav > li.studenti-4,
-.left-nav li.studenti-4
+.left-nav li.studenti-4,
+.left-nav > li.admin,
+.left-nav li.admin
 {
 	@apply hidden;
 }
+body.administrator .left-nav li.admin,
 body.aa-zl .left-nav li.aa-zl,
 body.tpp-1 .left-nav li.tpp-1,
 body.dpt-7 .left-nav li.dpt-7,

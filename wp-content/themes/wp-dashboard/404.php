@@ -12,13 +12,13 @@
 					</div>
 					
 					<div class="mb-8 lg:mb-0">
-						<h1 class="text-4xl lg:text-6xl text-primary">Chyba 404: stránka nenájdená</h1>
+						<h1 class="text-4xl lg:text-6xl text-primary"><?php _e("Chyba 404: stránka nenájdená", "intranetaa"); ?></h1>
 					</div>
 				</div>
 			</div>
 
 			<div class="container">
-				<p>Skontrolujte si URL adresu alebo využite navigáciu.</p>
+				<p><?php _e("Skontrolujte si URL adresu alebo využite navigáciu", "intranetaa"); ?>.</p>
 			</div>
 		</main>
 	</div>

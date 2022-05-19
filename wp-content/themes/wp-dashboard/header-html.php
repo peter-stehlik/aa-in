@@ -19,9 +19,9 @@
 
 		<div class="hidden lg:flex flex-1 justify-between items-center">
 			<div class="flex justify-end items-center w-full h-full px-8">
-				<p class="mr-1 text-primary">Prihlásený: <strong class="tracking-wide"><?php echo $user->display_name; ?></strong> | </p>
+				<p class="mr-1 text-primary"><?php _e("Prihlásený", "intranetaa"); ?>: <strong class="tracking-wide"><?php echo $user->display_name; ?></strong> | </p>
 			
-				<a class="tracking-wide text-sm hover:text-green" href="<?php echo wp_logout_url(); ?>">Odhlásiť sa</a>
+				<a class="tracking-wide text-sm hover:text-green" href="<?php echo wp_logout_url(); ?>"><?php _e("Odhlásiť sa", "intranetaa"); ?></a>
 			</div>
 		</div>
 	</header>

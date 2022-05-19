@@ -9,7 +9,7 @@
 				<div class="container">
 					<div class="flex flex-col lg:flex-row">
 						<div class="flex flex-col justify-center lg:w-3/4 pt-10 lg:py-10 lg:pr-8">
-							<h1 class="mb-4 text-4xl lg:text-6xl text-primary">Vitajte na aardwark intranete</h1>
+							<h1 class="mb-4 text-4xl lg:text-6xl text-primary"><?php _e("Vitajte na aardwark intranete", "intranetaa"); ?></h1>
 							
 							<?php if( is_home() ): ?>
 								<?php get_search_form(); ?> 
@@ -17,14 +17,14 @@
 						</div>
 
 						<div class="svg-wrap flex items-center">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/Aardwark_TeamALT 1.svg" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/Aardwark_TeamALT 1.svg" alt="Aardwark team">
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="container flex flex-col">
-				<h1 class="lg:mt-5 mb-8 text-primary text-3xl lg:text-6xl">Aktuality</h1>
+				<h1 class="lg:mt-5 mb-8 text-primary text-3xl lg:text-6xl"><?php _e("Aktuality", "intranetaa"); ?></h1>
 
 				<div class="flex flex-wrap -mx-2">
 					<?php $loop = 1; ?>
@@ -58,13 +58,15 @@
 
 					<div class="w-full py-4">
 						<div class="btn-secondary-wrap flex justify-between items-center w-full px-2 mt-8">
-							<?php previous_posts_link( 'Predošlé' ); ?>
-							<?php next_posts_link( 'Ďalšie' ); ?>
+							<?php previous_posts_link( __( 'Predošlé', 'intranetaa' ) ); ?>
+							<?php // previous_posts_link( 'Predošlé' ); ?>
+							<?php // next_posts_link( 'Ďalšie' ); ?>
+							<?php next_posts_link( __( 'Ďalšie', 'intranetaa' ) ); ?>
 						</div>
 					</div>
 
 					<?php else : ?>
-						<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+						<p><?php esc_html_e( 'Prepáčte, nenašli sme žiadne príspevky.', 'intranetaa' ); ?></p>
 					<?php endif; ?>
 				</div>
 			</div>

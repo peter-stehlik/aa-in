@@ -22,7 +22,7 @@ if (!function_exists('page_setup')) :
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
          */
-        load_theme_textdomain('aardwark', get_template_directory().'/languages');
+        load_theme_textdomain('intranetaa', get_template_directory().'/languages');
 
         /*
          * Let WordPress manage the document title.
@@ -62,7 +62,7 @@ if (!function_exists('page_setup')) :
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus(
             array(
-                'top-menu' => __('Hlavné menu', 'aardwark'),
+                'top-menu' => __('Hlavné menu', 'intranetaa'),
             )
         );
 
@@ -109,7 +109,7 @@ function page_widgets_init()
         array(
             'name' => __('Pätička', 'aardwark'),
             'id' => 'sidebar-3',
-            'description' => __('Add widgets here to appear in your sidebar.', 'aardwark'),
+            'description' => __('Add widgets here to appear in your sidebar.', 'intranetaa'),
             'before_widget' => '<section id="%1$s" class="widget %2$s mb-4 pl-4 pb-4 border-bottom">',
             'after_widget' => '</section>',
             'before_title' => '<span class="h4 font-weight-bold d-block">',
@@ -121,7 +121,7 @@ add_action('widgets_init', 'page_widgets_init');
 
 function add_theme_scripts()
 {
-    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=3.9');
+    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=4.0');
 	// wp_enqueue_style('theme-styles', get_stylesheet_uri() . '?v=3.4');
 	
 	wp_enqueue_script('aardwark', get_template_directory_uri().'/assets/js/custom.min.js', array(), 1.3, true);

@@ -25,7 +25,7 @@
             </div>
 
             <ul class="left-nav lg:hidden">
-                <li><a href="<?php echo wp_logout_url(); ?>">Odhlásiť</a></li>
+                <li><a href="<?php echo wp_logout_url(); ?>"><?php _e("Odhlásiť", "intranetaa"); ?></a></li>
             </ul>
         </div>
 
@@ -34,7 +34,7 @@
                 <a class="js-back-mob-nav inline-flex mb-4 text-xl" href="javascript:void(0);">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow-full-right-medium.svg" width="30" height="20" alt="arrow white right" style="transform: rotate(180deg);">
                     
-                    <span class="flex ml-2">Späť</span>
+                    <span class="flex ml-2"><?php _e("Späť", "intranetaa"); ?></span>
                 </a>
 
                 <hr class="mb-4">

@@ -29,11 +29,11 @@
                             
                             <div class="js-reserve flex items-center justify-between p-4 mb-8 rounded-lg bg-gray-200">
                                 <h2 class="my-0">
-                                    <span class="block text-sm font-normal">Cena: </span>
+                                    <span class="block text-sm font-normal"><?php _e("Cena", "intranetaa"); ?>: </span>
                                     <span><?php the_field("cena"); ?>&euro;</span>
                                 </h2>
 
-                                <a class="js-reserve-btn btn px-8 py-4 rounded-lg bg-primary hover:bg-secondary text-white font-semibold tracking-wide no-underline" href="javascript:void(0);">Rezervovať</a>
+                                <a class="js-reserve-btn btn px-8 py-4 rounded-lg bg-primary hover:bg-secondary text-white font-semibold tracking-wide no-underline" href="javascript:void(0);"><?php _e("Rezervovať", "intranetaa"); ?></a>
                             </div>
 
                             <div class="js-preloader hidden flex items-center justify-between p-4 mb-8 rounded-lg bg-gray-200">
@@ -74,13 +74,13 @@
                             </div>
 
                             <div class="js-reserved hidden flex items-center justify-center p-8 mb-8 rounded-lg bg-green">
-                                <h2 class="my-0 uppercase tracking-wider text-white text-3xl">Rezervované</h2>
+                                <h2 class="my-0 uppercase tracking-wider text-white text-3xl"><?php _e("Rezervované", "intranetaa"); ?></h2>
                             </div>
 
                         <?php else: ?>
 
                             <div class="js-reserved flex items-center justify-center p-8 mb-8 rounded-lg bg-green">
-                                <h2 class="my-0 uppercase tracking-wider text-white text-3xl">Rezervované</h2>
+                                <h2 class="my-0 uppercase tracking-wider text-white text-3xl"><?php _e("Rezervované", "intranetaa"); ?></h2>
                             </div>
 
                         <?php endif; ?>
@@ -89,12 +89,12 @@
                 </div>
 
                 <div class="mt-20">
-                    <a class="btn px-8 py-4 border-2 border-primary rounded-full bg-white hover:bg-quaternary text-primary font-semibold tracking-wide no-underline" href="<?php echo home_url('aa-bazos'); ?>">späť na Bazár</a>
+                    <a class="btn px-8 py-4 border-2 border-primary rounded-full bg-white hover:bg-quaternary text-primary font-semibold tracking-wide no-underline" href="<?php echo home_url('aa-bazos'); ?>"><?php _e("späť na Bazár", "intranetaa"); ?></a>
                 </div>
 			</div>
 
             <?php endwhile; else : ?>
-                <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                <p><?php esc_html_e( 'Prepáčte, nenašli sme žiadne príspevky.', 'intranetaa' ); ?></p>
             <?php endif; ?>
 
             <?php get_footer("html"); ?>
@@ -153,7 +153,7 @@
                         document.querySelector(".js-preloader").classList.add("hidden");
                         document.querySelector(".js-reserved").classList.remove("hidden");
                     } else {
-                        alert("Vyskytla sa chyba. Kontaktujte prosím podporu.");
+                        alert("<?php _e('Vyskytla sa chyba. Kontaktujte prosím podporu.', 'intranetaa'); ?>");
                     }
                 });
             });

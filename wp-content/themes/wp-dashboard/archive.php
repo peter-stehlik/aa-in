@@ -32,7 +32,7 @@
 							<article class="h-full bg-neutral-100 rounded-lg text-primary overflow-hidden">
 								<figure class="relative">
 									<?php if( !empty(get_field("rezervovane")) ): ?>
-										<span class="absolute right-2 top-2 py-1 px-4 bg-green rounded-md text-black uppercase tracking-wide font-bold">rezervované</span>
+										<span class="absolute right-2 top-2 py-1 px-4 bg-green rounded-md text-black uppercase tracking-wide font-bold"><?php _e("rezervované", "intranetaa"); ?></span>
 									<?php endif; ?>
 
 									<a href="<?php the_permalink(); ?>">
@@ -61,13 +61,13 @@
 
 					<div class="w-full py-4">
 						<div class="btn-secondary-wrap flex justify-between items-center w-full px-2 mt-8">
-							<?php previous_posts_link( 'Predošlé' ); ?>
-							<?php next_posts_link( 'Ďalšie' ); ?>
+							<?php previous_posts_link( __( 'Predošlé', 'intranetaa' ) ); ?>
+							<?php next_posts_link( __( 'Ďalšie', 'intranetaa' ) ); ?>
 						</div>
 					</div>
 
 					<?php else : ?>
-						<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+						<p><?php esc_html_e( 'Prepáčte, nenašli sme žiadne príspevky.', 'intranetaa' ); ?></p>
 					<?php endif; ?>
 				</div>
 			</div>
