@@ -33,7 +33,7 @@ let AA = {
 		let $navLinks = document.querySelectorAll(".left-nav > li");
 		let build = $el => {
 			let $arr = `
-				<a class="js-show-sub-nav lg:hidden" href="javascript:void(0);">
+				<a class="js-show-sub-nav xl:hidden" href="javascript:void(0);">
 					<img src="/intranet/wp-content/themes/wp-dashboard/assets/img/arrow-full-right-medium.svg" width="30" height="20" alt="arrow white right">
 				</a>
 			`;
@@ -70,6 +70,6 @@ let AA = {
 
 AA.toggleMobNav();
 
-if( window.innerWidth < 1024 ){
+if( window.innerWidth < 1280 ){
 	AA.buildMobNav();
 }

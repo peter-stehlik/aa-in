@@ -31,13 +31,13 @@ body {
 	transform: translateX(0);
 }
 .left-nav {
-	@apply mt-2 text-lg;
+	@apply mt-2 text-sm;
 }
 .left-nav > li {
 	@apply relative flex justify-between;
 }
 .left-nav > li > a {
-	@apply flex justify-start px-4 py-2 tracking-wide font-semibold;
+	@apply flex justify-start px-4 py-1 tracking-wide font-semibold;
 }
 .left-nav > li:hover,
 .left-nav > li:hover > ul,
@@ -98,7 +98,14 @@ body.administrator .left-nav li {
 .current-menu-parent .current-menu-item {
 	@apply underline;
 }
-@screen lg {
+@screen xl {
+	.left-nav {
+		@apply text-lg;
+	}
+	.left-nav > li > a {
+		@apply py-2;
+	}
+
 	.nav-wrap {
 		transform: translateX(0);
 	}

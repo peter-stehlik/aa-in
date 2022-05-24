@@ -5,9 +5,9 @@
 	<div class="flex h-screen">		
         <?php get_sidebar(); ?>
 
-		<main class="flex-1 lg:ml-60 px-4 lg:px-8 pt-20">
-			<div class="container flex flex-col mx-auto lg:mx-0">
-                <div class="prose prose-a:text-secondary hover:prose-a:no-underline xl:w-3/4 lg:pt-8 pb-20 mx-auto">
+		<main class="flex-1 xl:ml-60 px-4 xl:px-8 pt-20">
+			<div class="container flex flex-col mx-auto xl:mx-0">
+                <div class="prose prose-a:text-secondary hover:prose-a:no-underline xl:w-3/4 xl:pt-8 pb-20 mx-auto">
                     <h1 class="mb-2"><?php printf( __( 'Výsledky pre: %s', 'intranetaa' ), get_search_query() ); ?></h1>
 
                     <?php

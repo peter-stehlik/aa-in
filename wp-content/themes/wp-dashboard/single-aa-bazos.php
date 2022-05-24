@@ -4,21 +4,21 @@
 	<div class="flex">		
         <?php get_sidebar(); ?>
 
-		<main class="relative flex-1 min-h-[85vh] lg:ml-60 px-4 lg:px-16 pt-20">
+		<main class="relative flex-1 min-h-[85vh] xl:ml-60 px-4 xl:px-16 pt-20">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <div class="container border-neutral-500 border-b border-dotted mb-8 lg:mb-16">
-                    <div class="flex flex-col lg:flex-row lg:items-center">
+                <div class="container border-neutral-500 border-b border-dotted mb-8 xl:mb-16">
+                    <div class="flex flex-col xl:flex-row xl:items-center">
                         <?php echo get_template_part("template-parts/content", "ilustration-img"); ?>
                         
-                        <div class="ml-8 mb-8 lg:mb-0">
-                            <h1 class="py-2 text-4xl lg:text-6xl text-primary"><?php the_title(); ?></h1>
+                        <div class="ml-8 mb-8 xl:mb-0">
+                            <h1 class="py-2 text-4xl xl:text-6xl text-primary"><?php the_title(); ?></h1>
                         </div>
                     </div>
                 </div>
 
-            <div class="container flex flex-col lg:pl-8 2xl:pl-0" id="detail">
+            <div class="container flex flex-col xl:pl-8 2xl:pl-0" id="detail">
                 <?php if( get_the_post_thumbnail() ): ?>
-                    <div class="flex-1 flex items-center max-w-2xl pb-8 lg:py-8 mt-8 lg:mt-0">
+                    <div class="flex-1 flex items-center max-w-2xl pb-8 xl:py-8 mt-8 xl:mt-0">
                         <?php the_post_thumbnail("large", ['class' => 'rounded-lg object-cover']) ?>
                     </div>
                 <?php endif; ?>

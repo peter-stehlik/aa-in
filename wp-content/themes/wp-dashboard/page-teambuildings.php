@@ -10,20 +10,18 @@
 	<div class="flex">		
         <?php get_sidebar(); ?>
 
-		<main class="relative flex-1 min-h-[85vh] lg:ml-60 px-4 lg:px-16 pt-20">
-            <div class="container border-neutral-500 border-b border-dotted mb-8 lg:mb-16">
-                <div class="flex flex-col lg:flex-row lg:items-center">
+		<main class="relative flex-1 min-h-[85vh] xl:ml-60 px-4 xl:px-16 pt-20">
+            <div class="container border-neutral-500 border-b border-dotted mb-8 xl:mb-16">
+                <div class="flex flex-col xl:flex-row xl:items-center">
                     <?php echo get_template_part("template-parts/content", "ilustration-img"); ?>
                     
-                    <div class="ml-8 mb-8 lg:mb-0">
-                        <h1 class="py-2 text-4xl lg:text-6xl text-primary"><?php the_title(); ?></h1>
+                    <div class="ml-8 mb-8 xl:mb-0">
+                        <h1 class="py-2 text-4xl xl:text-6xl text-primary"><?php the_title(); ?></h1>
                     </div>
                 </div>
             </div>
 
             <div class="container flex flex-col" id="detail">
-				<h1 class="md:max-w-[704px] pr-8 md:pr-0 md:mt-5 md:mb-8 text-right md:text-left text-primary text-3xl lg:text-6xl"></h1>
-
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             
                 <div class="prose mb-8 prose-p:text-lg prose-headings:text-primary prose-headings:font-normal prose-h2:text-3xl prose-a:text-secondary hover:prose-a:no-underline"> 

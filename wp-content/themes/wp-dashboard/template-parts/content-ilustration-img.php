@@ -9,7 +9,7 @@
         if( is_single() ){
             $post_type = get_post_type();
 
-            echo '<div class="pl-8 mb-4 lg:mb-0">';
+            echo '<div class="pl-8 mb-4 xl:mb-0">';
                 switch( $post_type ){
                     case "aa-bazos":
                         echo get_template_part("template-parts/svg/content", "animation-bazar");
@@ -29,7 +29,7 @@
 ?>
 
 <?php if( isset($post_id) && get_field("ilustration", $post_id) ): ?>
-    <div class="pl-8 mb-4 lg:mb-0">
+    <div class="pl-8 mb-4 xl:mb-0">
         <?php
             echo get_template_part("template-parts/content", "ilustration", [
                 "post_id" => $post_id
