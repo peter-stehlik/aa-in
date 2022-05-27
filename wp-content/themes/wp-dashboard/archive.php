@@ -47,11 +47,13 @@
 								</figure>
 
 								<div class="p-4">
-									<?php
+									<?php if( !is_category() ): ?>
+										<?php
 										$current_post_categories = get_the_category(); 
 										foreach( $current_post_categories as $category): ?>
 											<span class="text-sm text-green"><a class="hover:border-b border-green" href="<?php echo home_url(); ?>?cat=<?php echo $category->cat_ID; ?>"><?php echo $category->cat_name; ?></a></span>
 										<?php endforeach; ?>
+									<?php endif; ?>
 									
 									<h2 class="text-xl xl:text-3xl"><a class="hover:underline focus:text-green" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								</div>

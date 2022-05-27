@@ -23,9 +23,9 @@
 			<div class="flex px-8">
 				<?php foreach( $langs as $lang ): ?>
 					<?php if( $lang["active"] ): ?>
-						<a class="px-2 text-uppercase cursor-default text-black font-semibold" href="javascript:void(0);"><?php echo $lang["code"]; ?></a>
+						<a class="px-2 uppercase cursor-default text-black font-semibold" href="javascript:void(0);"><?php echo $lang["code"]; ?></a>
 					<?php else: ?>
-						<a class="px-2 text-uppercase font-semibold" href="<?php echo $lang["url"]; ?>"><?php echo $lang["code"]; ?></a>
+						<a class="px-2 uppercase font-semibold" href="<?php echo $lang["url"]; ?>"><?php echo $lang["code"]; ?></a>
 					<?php endif; ?>
 				<?php endforeach; ?>
 			</div>

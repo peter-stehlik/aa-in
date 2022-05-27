@@ -66,10 +66,48 @@ let AA = {
 			AA.$subMenu.classList.remove("is-opened");
 		});
 	},
+	buildDesktopSubNav: () => {
+		let $navLinks = document.querySelectorAll("#mainNav > li");
+		let $wrapper = document.getElementById("mainSubNavWrap");
+
+		let build = $el => {
+			$el.addEventListener("mouseenter", () => {
+				let $subNav = $el.querySelector("ul");
+
+				if( !$subNav ){
+					hideWrapperHelper();
+
+					return;
+				}
+
+				
+				let subNavItems = $subNav.innerHTML;
+				
+				document.getElementById("mainSubNav").innerHTML = subNavItems;
+
+				showWrapperHelper();			
+			});
+		};
+
+		$navLinks.forEach( el => build(el) );
+
+		$wrapper.addEventListener("mouseleave", () => {
+			hideWrapperHelper();
+		});
+
+		let hideWrapperHelper = () => {
+			$wrapper.classList.add("hidden");
+		};
+		let showWrapperHelper = () => {
+			$wrapper.classList.remove("hidden");
+		};
+	},
 }
 
 AA.toggleMobNav();
 
 if( window.innerWidth < 1280 ){
 	AA.buildMobNav();
+} else {
+	AA.buildDesktopSubNav();
 }

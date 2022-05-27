@@ -6,6 +6,8 @@
         <?php get_sidebar(); ?>
 
 		<main class="flex-1 xl:ml-60 px-4 xl:px-8 pt-20">
+            <?php echo get_template_part("template-parts/content", "desktop-subnav"); ?>
+
 			<div class="container flex flex-col mx-auto xl:mx-0">
                 <div class="prose prose-a:text-secondary hover:prose-a:no-underline xl:w-3/4 xl:pt-8 pb-20 mx-auto">
                     <h1 class="mb-2"><?php printf( __( 'Výsledky pre: %s', 'intranetaa' ), get_search_query() ); ?></h1>

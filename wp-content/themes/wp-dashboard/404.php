@@ -5,6 +5,8 @@
         <?php get_sidebar(); ?>
 
 		<main class="flex-1 xl:ml-60 px-4 xl:px-16 pt-20">
+			<?php echo get_template_part("template-parts/content", "desktop-subnav"); ?>
+
 			<div class="container border-neutral-500 border-b border-dotted mb-8 xl:mb-16">
 				<div class="flex flex-col xl:flex-row xl:items-center">
 					<div class="px-8 mb-4 xl:mb-0">

@@ -121,10 +121,10 @@ add_action('widgets_init', 'page_widgets_init');
 
 function add_theme_scripts()
 {
-    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=4.3');
+    wp_enqueue_style('aardwark', get_template_directory_uri().'/assets/css/custom.min.css?v=5.2');
 	// wp_enqueue_style('theme-styles', get_stylesheet_uri() . '?v=3.4');
 	
-	wp_enqueue_script('aardwark', get_template_directory_uri().'/assets/js/custom.min.js', array(), 1.4, true);
+	wp_enqueue_script('aardwark', get_template_directory_uri().'/assets/js/custom.min.js', array(), 1.8, true);
 	
 }
   add_action('wp_enqueue_scripts', 'add_theme_scripts');
@@ -431,3 +431,13 @@ function notify_users($post_id, $post, $update){
 }
 
 add_action("save_post", "notify_users", 10, 3);
+
+
+
+/*
+function ss_search_filter( $query ) {
+    if ( $query->is_search ) {
+        $query->set( 'post__not_in', array( 68, 538, 525, 548, 567, 15, 267, 1098, 1100, 54) ); // 68, 538, 525, 548, 567 benefity 1,23,4,6,7 ................. 15, onboarding manual 1 7 4, 23 6 ............ 1098, 1100, 54 admin, templaty zoho, zoho manual pre adminov 
+    }
+}
+add_action( 'pre_get_posts', 'ss_search_filter' );*/

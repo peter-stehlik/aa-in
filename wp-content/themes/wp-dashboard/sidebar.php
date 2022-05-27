@@ -1,9 +1,9 @@
 <aside class="nav-wrap fixed left-0 top-12 z-10 xl:flex flex-col w-full xl:w-60 xl:pt-10 h-screen bg-neutral-100 text-primary">
     <div class="sub-nav-wrap w-[200%] flex xl:w-full">
-        <div class="flex-1">
-            <div class="mb-4 h-[46px]">
+        <div class="flex-1 h-screen overflow-auto">
+            <div class="mb-4 xl:mb-8 h-[46px]">
                 <?php if( !is_home() ): ?>
-                    <div class="mx-4 mt-4">
+                    <div class="mx-4 mt-4 xl:mt-0">
                         <?php get_search_form(); ?>
                     </div>
                 <?php endif; ?>
@@ -25,8 +25,8 @@
                 wp_nav_menu(
                     array(
                         'theme_location' => 'top-menu',
-                        'menu_class' => 'left-nav xl:pt-5',
-                        'menu_id' => '',
+                        'menu_class' => 'left-nav xl:pt-4 xl:mb-20',
+                        'menu_id' => 'mainNav',
                         'container' => '',
                     )
                 );

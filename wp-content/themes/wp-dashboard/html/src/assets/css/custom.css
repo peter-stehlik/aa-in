@@ -18,6 +18,20 @@ body {
 .btn-secondary-wrap a {
 	@apply btn px-8 py-4 border-2 border-primary rounded-full bg-white hover:bg-quaternary text-primary font-semibold tracking-wide no-underline;
 }
+.overflow-auto {
+	scrollbar-color: black;
+  	scrollbar-width: thin;
+}
+.overflow-auto::-webkit-scrollbar {
+	width: 5px;
+	height: 8px;
+	background-color: transparent;
+}
+
+.overflow-auto::-webkit-scrollbar-thumb {
+	background: #aaa;
+	border-radius: 9999px;
+}
 
 /*
 *	NAVIGATION
@@ -39,17 +53,26 @@ body {
 .left-nav > li > a {
 	@apply flex justify-start px-4 py-1 tracking-wide font-semibold;
 }
+#mainSubNav a {
+	@apply flex justify-start px-4 py-1 tracking-wide text-primary;
+}
+#mainSubNav a:hover {
+	@apply text-white;
+}
 .left-nav > li:hover,
 .left-nav > li:hover > ul,
 .current-menu-parent,
 .current-menu-item {
 	@apply bg-green;
 }
+.current-menu-item a {
+	@apply px-4;
+}
 .left-nav > li:hover > ul {
 	@apply hidden lg:flex flex-col;
 }
 .left-nav > li > ul {
-	@apply absolute left-full top-0 w-60 lg:drop-shadow-2xl hidden py-2;
+	@apply absolute left-full top-0 w-60 hidden py-2;
 }
 .left-nav > li.align-middle > ul {
 	top: -160px;
@@ -118,6 +141,15 @@ body.administrator .left-nav li {
 	.menu-item-has-children:after {
 		content:"+";
 		@apply relative top-2 pr-4 font-bold;
+	}
+	#mainSubNav .current-menu-item a {
+		@apply text-white;
+	}
+}
+@media screen and ( min-height: 768px )
+{
+	#mainSubNav {
+		@apply pt-24 mt-3;
 	}
 }
 .sub-nav-wrap {

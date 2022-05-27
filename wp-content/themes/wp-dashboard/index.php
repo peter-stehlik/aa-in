@@ -5,6 +5,8 @@
         <?php get_sidebar(); ?>
 
 		<main class="relative flex-1 min-h-[85vh] xl:ml-60 px-4 xl:px-16 pt-20">
+			<?php echo get_template_part("template-parts/content", "desktop-subnav"); ?>
+
 			<div class="mb-8">
 				<div class="container">
 					<div class="flex flex-col xl:flex-row">
@@ -44,11 +46,13 @@
 								</figure>
 
 								<div class="p-4">
-									<?php
+									<?php if( !is_category() ): ?>
+										<?php
 										$current_post_categories = get_the_category(); 
 										foreach( $current_post_categories as $category): ?>
 											<span class="text-sm text-green"><a class="hover:border-b border-green" href="<?php echo home_url(); ?>?cat=<?php echo $category->cat_ID; ?>"><?php echo $category->cat_name; ?></a></span>
 										<?php endforeach; ?>
+									<?php endif; ?>
 									
 									<h2 class="text-xl xl:text-3xl"><a class="hover:underline focus:text-green" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								</div>
