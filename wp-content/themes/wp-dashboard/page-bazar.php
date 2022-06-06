@@ -1,3 +1,9 @@
+<?php
+/*
+    Template Name: Bazar
+*/
+?>
+
 <?php get_header('head'); ?>
     <?php get_header('html'); ?>
 
@@ -7,29 +13,39 @@
 		<main class="relative flex-1 min-h-[85vh] xl:ml-60 px-4 xl:px-16 pt-20">
 			<?php echo get_template_part("template-parts/content", "desktop-subnav"); ?>
 
-			<?php
-				$archiveTitle = get_the_archive_title();
-				$archiveTitleArr = explode(":", $archiveTitle);
-				array_shift($archiveTitleArr);
-				$archiveTitle = implode(" ", $archiveTitleArr);
-			?>
-
 			<div class="container border-neutral-500 border-b border-dotted mb-8 xl:mb-16">
 				<div class="flex flex-col xl:flex-row xl:items-center">
 					<div class="pl-8 mb-4 xl:mb-0">
-						<?php echo get_template_part("template-parts/content", "ilustration-img"); ?>
+						<?php echo get_template_part("template-parts/svg/content", "animation-bazar"); ?>
 					</div>
 					
 					<div class="ml-8 mb-8 xl:mb-0">
-						<h1 class="py-2 text-4xl xl:text-6xl text-primary"><?php echo $archiveTitle; ?></h1>
+						<h1 class="py-2 text-4xl xl:text-6xl text-primary"><?php the_title(); ?></h1>
 					</div>
 				</div>
 			</div>
 
 			<div class="container flex flex-col" id="detail">
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                
+                    <div class="prose mb-8 prose-p:text-lg prose-headings:text-primary prose-headings:font-normal prose-h2:text-3xl prose-a:text-secondary hover:prose-a:no-underline"> 
+                        <?php the_content(); ?>
+                    </div>
+
+                <?php endwhile; else : ?>
+                    <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                <?php endif; ?>
+
 				<div class="flex flex-wrap -mx-2 mb-8">
-					<?php $loop = 1; ?>
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                    <?php     
+                        $args = [
+                            'order' => 'DESC',
+                            'orderby' => 'date',
+                            'post_type' => 'aa-bazos',
+                        ];
+                        $the_query = new WP_Query($args);
+                    ?>
+					<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 						<div class="w-full sm:w-1/2 xl:w-1/3 mb-4 px-2 hover:drop-shadow-xl hover:-translate-y-1 transition-transform duration-500">
 							<article class="h-full bg-neutral-100 rounded-lg text-primary overflow-hidden">
 								<figure class="relative">
@@ -48,31 +64,18 @@
 									</a>
 								</figure>
 
-								<div class="p-4">
-									<?php if( !is_category() ): ?>
-										<?php
-										$current_post_categories = get_the_category(); 
-										foreach( $current_post_categories as $category): ?>
-											<span class="text-sm text-green"><a class="hover:border-b border-green" href="<?php echo home_url(); ?>?cat=<?php echo $category->cat_ID; ?>"><?php echo $category->cat_name; ?></a></span>
-										<?php endforeach; ?>
-									<?php endif; ?>
-									
+								<div class="p-4">								
 									<h2 class="text-xl xl:text-3xl"><a class="hover:underline focus:text-green" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								</div>
 							</article>
 						</div>
-					<?php $loop++; endwhile; ?>
-
-					<div class="w-full py-4">
-						<div class="btn-secondary-wrap flex justify-between items-center w-full px-2 mt-8">
-							<?php previous_posts_link( __( 'Predošlé', 'intranetaa' ) ); ?>
-							<?php next_posts_link( __( 'Ďalšie', 'intranetaa' ) ); ?>
-						</div>
-					</div>
+					<?php endwhile; ?>
 
 					<?php else : ?>
 						<p><?php esc_html_e( 'Prepáčte, nenašli sme žiadne príspevky.', 'intranetaa' ); ?></p>
 					<?php endif; ?>
+
+                    <?php wp_reset_postdata(); ?>
 				</div>
 			</div>
 			

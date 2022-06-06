@@ -91,7 +91,7 @@
                 </div>
 
                 <div class="mt-20">
-                    <a class="btn px-8 py-4 border-2 border-primary rounded-full bg-white hover:bg-quaternary text-primary font-semibold tracking-wide no-underline" href="<?php echo home_url('aa-bazos'); ?>"><?php _e("späť na Bazár", "intranetaa"); ?></a>
+                    <a class="btn px-8 py-4 border-2 border-primary rounded-full bg-white hover:bg-quaternary text-primary font-semibold tracking-wide no-underline" href="<?php echo home_url('aa-bazar'); ?>"><?php _e("späť na Bazár", "intranetaa"); ?></a>
                 </div>
 			</div>
 

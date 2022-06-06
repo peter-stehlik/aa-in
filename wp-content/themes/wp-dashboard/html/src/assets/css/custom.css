@@ -146,10 +146,13 @@ body.administrator .left-nav li {
 		@apply text-white;
 	}
 }
-@media screen and ( min-height: 768px )
+@media screen and ( max-height: 768px )
 {
+	#mainSubNavWrap {
+		@apply justify-start bg-green;
+	}
 	#mainSubNav {
-		@apply pt-24 mt-3;
+		@apply py-8;
 	}
 }
 .sub-nav-wrap {
