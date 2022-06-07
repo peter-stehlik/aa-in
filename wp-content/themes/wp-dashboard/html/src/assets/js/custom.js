@@ -71,7 +71,13 @@ let AA = {
 		let $wrapper = document.getElementById("mainSubNavWrap");
 
 		let build = $el => {
+			let index = [...$navLinks].indexOf($el);
+
 			$el.addEventListener("mouseenter", () => {
+				$wrapper.style.marginTop = 0;
+				$wrapper.classList.remove("justify-center");
+				$wrapper.classList.add("justify-start");
+
 				let $subNav = $el.querySelector("ul");
 
 				if( !$subNav ){
@@ -80,7 +86,19 @@ let AA = {
 					return;
 				}
 
-				
+				let offsetTop = $el.offsetTop;
+				let offsetHeight = $el.offsetHeight;
+				let subNavCount = $subNav.querySelectorAll("li").length;
+
+				if( subNavCount >= 7 ){
+					if( index >= 3 ){
+						$wrapper.classList.remove("justify-start");
+						$wrapper.classList.add("justify-center");
+					}
+				} else {
+					$wrapper.style.marginTop = (offsetTop-offsetHeight-16) + "px";
+				}
+
 				let subNavItems = $subNav.innerHTML;
 				
 				document.getElementById("mainSubNav").innerHTML = subNavItems;
